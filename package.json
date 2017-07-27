@@ -10,6 +10,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mysql": "^2.14.0",
     "sequelize": "^4.4.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jurabekkenjaev/controversy.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/jurabekkenjaev/controversy/issues"
+  },
+  "homepage": "https://github.com/jurabekkenjaev/controversy#readme"
 }
