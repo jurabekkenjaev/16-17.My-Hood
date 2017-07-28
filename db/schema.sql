@@ -1,0 +1,8 @@
+CREATE TABLE information(
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL,
+  location VARCHAR(50) NOT NULL,
+  venue VARCHAR(100) NOT NULL,
+  description VARCHAR(500) NOT NULL,
+  PRIMARY KEY (id)
+);
