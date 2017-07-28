@@ -15,7 +15,7 @@ var PORT = process.env.PORT || 3333;
 // * SETS UP THE EXPRESS APP TO HANDLE DATA PARSING**************************
 //---------------------------------------------------------------------------
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: ture }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
