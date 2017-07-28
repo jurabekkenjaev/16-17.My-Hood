@@ -4,7 +4,8 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     methodOverride = require("method-override"),
     path = require("path"),
-    mysql = require("mysql");
+    mysql = require("mysql"),
+    handlebars = require("handlebars");
 
 // ******************************** EXPRESS SET-UP **************************
 //---------------------------------------------------------------------------
