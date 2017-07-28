@@ -10,7 +10,7 @@ var express = require("express"),
 //---------------------------------------------------------------------------
 var app = express();
 
-var PORT = process.env.PORT || 3333;
+var PORT = process.env.PORT || 3306;
 
 // * SETS UP THE EXPRESS APP TO HANDLE DATA PARSING**************************
 //---------------------------------------------------------------------------
