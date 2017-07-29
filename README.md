@@ -2,6 +2,16 @@
 
 This document outlines the base requirements for Project 2.
 
+## Team
+Fernando Medina
+Nurul
+Jake Demonaco
+Jurabek Kenjaev
+Manassah
+Robert Spica
+
+
+
 ### Requirements
 
 Your project must:
