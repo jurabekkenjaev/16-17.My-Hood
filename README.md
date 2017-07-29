@@ -56,46 +56,46 @@ Your project _should_:
 ## Site architecture:
 ________________________
 
-├── config
-│   ├── connection.js
-│   └── orm.js
-│ 
-├── controllers
-│   └── MyHood_controller.js
-│
-├── db
-│   ├── USER-schema.sql
-│   
-│   ├── RESULTS-schema.sql
-│
-├── models
-│   └── Results.js
-│ 
-├── node_modules
-│ 
-├── package.json
-│
-├── public
-│   ├── assets
-│   │   ├── css
-│   │   │   └── index.css
-│   │   │   └── search.css
-│   │   │   └── Post.css
-│   │   └── img
-│   │       └── ****.png
-│   │       └── ****.png
-│   └── test.html
-│
-├── server.js
-│
-└── views
-│   ├── index.handlebars
-│   └── layouts
-│        └── main.handlebars
-│        
-├── Package.json
-│
-└── Readme
+* ├── config
+* │   ├── connection.js
+* │   └── orm.js
+* │ 
+* ├── controllers
+* │   └── MyHood_controller.js
+* │
+* ├── db
+* │   ├── USER-schema.sql
+* │   
+* │   ├── RESULTS-schema.sql
+* │
+* ├── models
+* │   └── Results.js
+* │ 
+* ├── node_modules
+* │ 
+* ├── package.json
+* │
+* ├── public
+* │   ├── assets
+* │   │   ├── css
+* │   │   │   └── index.css
+* │   │   │   └── search.css
+* │   │   │   └── Post.css
+* │   │   └── img
+* │   │       └── ****.png
+* │   │       └── ****.png
+* │   └── test.html
+* │
+* ├── server.js
+* │
+* └── views
+* │   ├── index.handlebars
+* │   └── layouts
+* │        └── main.handlebars
+* │        
+* ├── Package.json
+* │
+* └── Readme
 
 
 Additional tech:
