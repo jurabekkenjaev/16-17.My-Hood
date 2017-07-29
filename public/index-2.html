@@ -59,23 +59,23 @@
                 <button class="post">
                     <h3 class="btnLabel"> I have a place to share</h3></button>
             </div>
+
             <div id="map" style="width:700px; height:500px; margin-left:80px;"></div>
+
         </section>
 
         
         
     </main>
 
-
-
     <!-- modal window for sign-in -->
     <section class="modalDisplay signInModal">
         <div class="modalForm">
             <div class="modalContent">
                 <div class="welcome">
-                    <h1>Welcome to the 'Hood, Glad to see you!</h1></div>
+                    <h1>Welcome to the 'Hood', Glad to see you!</h1></div>
                 <div class="boxStyle col-6">
-                    <input id="textEmail" class="validate" type="email" placeholder="Email address" reqiured>
+                    <input id="textEmail" class="validate" type="email" placeholder="Email address" required>
                     <label for="textEmail">email address</label>
                 </div>
                 <div class="boxStyle col-6">
@@ -84,6 +84,9 @@
                 </div>
                 <div class="Btn modalBtn boxStyle">
                     <button id="btnLogin"><img src="public/images/key_solid-wht.svg" class="modalIcon" alt="Key icon" width="40">
+
+                    <button id="btn-Login"><img src="public/images/key_solid-wht.svg" class="modalIcon" alt="Key icon" width="40">
+
                         <h3 class="navLabel">Log in</h3></button>
                 </div>
                 <div class="divider">or</div>
@@ -99,9 +102,9 @@
         <div class="modalForm">
             <div class="modalContent">
                 <div class="welcome">
-                    <h1>Join the 'Hood!</h1></div>
+                    <h1>Join the 'Hood'!</h1></div>
                 <div class="boxStyle col-6">
-                    <input id="firstName" class="validate" type="text" placeholder="First Name" reqiured>
+                    <input id="firstName" class="validate" type="text" placeholder="First Name" required>
                     <label for="firstName">First Name</label>
                 </div>
                 <div class="boxStyle col-6">
@@ -113,7 +116,7 @@
                     <label for="textPassword">Password</label>
                 </div>
                 <div class="boxStyle col-6">
-                    <input id="textEmail" class="validate" type="email" placeholder="Email address" reqiured>
+                    <input id="textEmail" class="validate" type="email" placeholder="Email address" required>
                     <label for="textEmail">email address</label>
                 </div>
                 <div class="Btn modalBtn boxStyle">
@@ -162,6 +165,8 @@ $(document).ready(function() {
         e.stopPropagation();
         $(this).find('.modalIcon').toggleClass('iconRight');
     });
+
+
 });
 
 
@@ -204,6 +209,5 @@ $(document).ready(function() {
 //     infoWindow.open(map);
 // }
 </script>
-
 
 </html>

@@ -1,28 +1,35 @@
 var connection = require("./connection.js");
 
 // Object Relational Mapper (ORM)
+// LIKE keyword allows us to search row for all words that match
+// use jquery selector to grab the userInput in a variable, you must have both that variable and the orm required in the file where you want to use the database info
+// orm.selectName(userInput).val()
 
 var orm = {
-  selectWhere: function(tableInput, colToSearch, valOfCol) {
-    var queryString = "SELECT * FROM ?? WHERE ?? = ?";
-    connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
+  selectName: function(userInput) {
+    var queryString = "SELECT * FROM information WHERE name LIKE ?";
+    connection.query(queryString, [userInput], function(err, result) {
       console.log(result);
     });
   },
-  selectAndOrder: function(whatToSelect, table, orderCol) {
-    var queryString = "SELECT ?? FROM ?? ORDER BY ?? DESC";
-    console.log(queryString);
-    connection.query(queryString, [whatToSelect, table, orderCol], function(err, result) {
+  selectLocation: function(userInput) {
+    var queryString = "SELECT * FROM information WHERE location LIKE ?";
+    connection.query(queryString, [userInput], function(err, result) {
       console.log(result);
     });
   },
-  findWhoHasMost: function(tableOneCol, tableTwoForeignKey, tableOne, tableTwo) {
-    var queryString = "SELECT ??, COUNT(??) AS count FROM ?? LEFT JOIN ?? ON ??.??= ??.id GROUP BY ?? ORDER BY count DESC LIMIT 1";
-
-    connection.query(queryString, [tableOneCol, tableOneCol, tableOne, tableTwo, tableTwo, tableTwoForeignKey, tableOne, tableOneCol], function(err, result) {
+  selectVenue: function(userInput) {
+    var queryString = "SELECT * FROM information WHERE venue LIKE ?";
+    connection.query(queryString, [userInput], function(err, result) {
       console.log(result);
     });
-  }
+  },
+  selectDescription: function(userInput) {
+    var queryString = "SELECT * FROM information WHERE description LIKE ?";
+    connection.query(queryString, [userInput], function(err, result) {
+      console.log(result);
+    });
+  },
 };
 
 module.exports = orm;
