@@ -19,6 +19,22 @@
     @include background-opacity(black, 0.85);
 }
 
+/* The Close Button (x) upper right corner*/
+.xClose {
+    margin-bottom: 30px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: $secondaryColor;
+    font-size: 1.7em;
+}
+
+.xClose:hover,
+.xClose:focus {
+    color: $primaryColor;
+    cursor: pointer;
+}
+
 .welcome h1 {
     text-align: center;
     font-size: 1.2em;

@@ -1,10 +1,7 @@
 /*
-Error: It's not clear which file to import for '@import "var"'.
-       Candidates:
-         _var.scss
-         var.scss
-       Please delete or rename all but one of these files.
-        on line 1 of /Users/Admin/rutgerswork/RBC-homework/Google-Firebase-Auth/public/css/header.scss
+Error: File to import not found or unreadable: var.
+       Load path: /Users/Admin/rutgerswork/RBC-homework/controversy/public/assets/css/header to sort
+        on line 1 of /Users/Admin/rutgerswork/RBC-homework/controversy/public/assets/css/header to sort/header.scss
 
 1: @import 'var';
 2: 
@@ -14,7 +11,7 @@ Error: It's not clear which file to import for '@import "var"'.
 6:     max-width: 1024px;
 
 Backtrace:
-/Users/Admin/rutgerswork/RBC-homework/Google-Firebase-Auth/public/css/header.scss:1
+/Users/Admin/rutgerswork/RBC-homework/controversy/public/assets/css/header to sort/header.scss:1
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:45:in `import'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -52,4 +49,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: It's not clear which file to import for '@import \"var\"'.\A        Candidates:\A          _var.scss\A          var.scss\A        Please delete or rename all but one of these files.\A         on line 1 of /Users/Admin/rutgerswork/RBC-homework/Google-Firebase-Auth/public/css/header.scss\A \A 1: @import 'var';\A 2: \A 3: \A 4: body {\A 5:     width: 100%;\A 6:     max-width: 1024px;"; }
+  content: "Error: File to import not found or unreadable: var.\A        Load path: /Users/Admin/rutgerswork/RBC-homework/controversy/public/assets/css/header to sort\A         on line 1 of /Users/Admin/rutgerswork/RBC-homework/controversy/public/assets/css/header to sort/header.scss\A \A 1: @import 'var';\A 2: \A 3: \A 4: body {\A 5:     width: 100%;\A 6:     max-width: 1024px;"; }

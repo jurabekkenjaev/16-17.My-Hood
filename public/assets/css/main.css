@@ -11,6 +11,20 @@
   /* The Fallback */
   background: rgba(0, 0, 0, 0.85); }
 
+/* The Close Button (x) upper right corner*/
+.xClose {
+  margin-bottom: 30px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: #999;
+  font-size: 1.7em; }
+
+.xClose:hover,
+.xClose:focus {
+  color: #ec7705;
+  cursor: pointer; }
+
 .welcome h1 {
   text-align: center;
   font-size: 1.2em;
@@ -98,6 +112,9 @@ body {
 .logo {
   font: 400 2.25em "Vast Shadow", cursive;
   flex: 3; }
+
+.SearchWrapper {
+  height: 100%; }
 
 .boxStyle {
   box-sizing: border-box;
@@ -199,10 +216,8 @@ button:hover, input:hover {
 
 .SearchWrapper {
   width: 70%;
-  height: 100%;
   margin: 0 auto;
-  margin-top: 75px;
-  overflow: visible;}
+  margin-top: 75px; }
 
 .row {
   display: flex;
@@ -220,6 +235,5 @@ select {
 
 select:focus {
   outline: none; }
-
 
 /*# sourceMappingURL=main.css.map */
