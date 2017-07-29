@@ -9,9 +9,9 @@ var config = {
 };
 firebase.initializeApp(config);
 
-// Variable to reference the database
-var fullName;
-var email;
+// // Variable to reference the database
+// var fullName;
+// var email;
 
 // Get all elements from HTML file
 const textEmail = $("#textEmail");
@@ -23,7 +23,7 @@ const btnLogout = $("#btnLogout");
 
 // Add login event
 btnLogin.click(function() {
-    console.log("clicked login btn");
+    console.log("clicked the login btn");
     const email = textEmail.val();
     const password = textPassword.val();
     const auth = firebase.auth();
@@ -71,6 +71,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
 
 //------------- Google Maps Home Page--------------------
+
 var map, infoWindow;
 
 function initMap() {
