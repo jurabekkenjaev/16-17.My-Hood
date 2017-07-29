@@ -1,4 +1,4 @@
-# Project Description
+# MyHood - Project Description
 
 Hyper Local is a collection of guides for neighborhoods that are not on the grid but have a lot to offer. Searching yelp or google yields limited results at best.
 
