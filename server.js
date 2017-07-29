@@ -11,7 +11,7 @@ var express = require("express"),
 //---------------------------------------------------------------------------
 var app = express();
 
-var PORT = process.env.PORT || 3306;
+var PORT = process.env.PORT || 8080;
 
 // * SETS UP THE EXPRESS APP TO HANDLE DATA PARSING**************************
 //---------------------------------------------------------------------------
@@ -22,7 +22,8 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static(path.join(__dirname, './public')))
 
-// ******************************** ROUTES **********************************
+// ******************************** ROUTES
+require("./controllers/controller.js")(app);
 //---------------------------------------------------------------------------
 app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);
