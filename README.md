@@ -8,7 +8,7 @@ A local insiders curated Field Guide to the lesser known local spots that fly un
 * User generated database of exceptional places based on geography (post req/res).
 * Form inputs, validation and DB population.
 * Google maps API -- Geo-location.
-* FireBase user authenication.
+* FireBase user log-in authenication.
 * User controlled sorting based on activity and/or location (get req/res).
 * Preview review of what makes the listing great.
 * Up and down voting on listing.
@@ -97,9 +97,5 @@ ________________________
 * │
 * └── Readme
 
-
-Additional tech:
-Login Authentication
-Google Maps
 
 
