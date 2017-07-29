@@ -22,17 +22,14 @@ Nurul /
 Jake Demonaco /
 Jurabek Kenjaev /
 Manassah Watkins /
-Robert Spica /
+Robert Spica 
 
 
 ## Run MyHood
 
 Entery Heroku url here
 
-
-##### The landing page:
-
-<img width="815" alt="Friend Finder home page" src="xxx">
+<img width="815" alt="MyHood home page" src="xxx">
 
 
 ### Requirements
