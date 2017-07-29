@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Handlebars Lesson</title>
+	<!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+	 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<h1>Information</h1>
+	<div class="info-list-container"></div>
+
+	<script id="info-template" type="text/x-handlebars-template">
+		{{#each information}}
+		<li class="info-detail">
+			<h2>Name: {{name}}</h2>
+			<p>Location: {{location}}</p>
+			<p>Venue: {{venue}}</p>
+			<p>Description: {{description}}</p>
+		</li>
+		{{/each}}
+	</script>
+	
+	<script type='text/javascript' src='assets/js/handlebars-v4.0.10.js'></script>
+
+	<script type='text/javascript' src='assets/js/script.js'></script>
+</body>
+</html>

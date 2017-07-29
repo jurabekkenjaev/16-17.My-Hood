@@ -12,11 +12,15 @@ module.exports = function(app) {
 app.get('/', function (req, res) {
 	console.log("Route found!");
 	res.send("Test Successful!!");
-});
+	});
 
 app.get('/info/:name', function (req, res) {
 		console.log("Info route found!");
 		res.send('User requested route found: ' + req.params.name);
+	});
+
+app.get("/public/test", function(req, res) {
+	res.sendFile(__dirname + "/public/test");
 	});
 
 app.post('/info/create', function (req, res) {
