@@ -20,7 +20,7 @@ Fernando Medina /
 Nurul /
 Jake Demonaco /
 Jurabek Kenjaev /
-Manassah /
+Manassah Watkins /
 Robert Spica /
 
 
@@ -45,7 +45,6 @@ Your project must:
 * Meet good quality coding standards (indentation, scoping, naming).
 
 ### Suggestions
-
 Your project _should_:
 * Incorporate Basic Testing Framework, see [Project Suggestions](../Suggestions/README.md);
 * Use Handlebars for Server-Side Templating
@@ -53,48 +52,26 @@ Your project _should_:
 * Use an existing public dataset to power the database
 * Create a migration strategy for sharing data across team members.
 
-## Site architecture:
+## Site directory architecture:
 ________________________
 
 * ├── config
-* │   ├── connection.js
-* │   └── orm.js
-* │ 
 * ├── controllers
-* │   └── MyHood_controller.js
-* │
 * ├── db
-* │   ├── USER-schema.sql
-* │   
-* │   ├── RESULTS-schema.sql
-* │
 * ├── models
-* │   └── Results.js
-* │ 
-* ├── node_modules
-* │ 
-* ├── package.json
-* │
 * ├── public
 * │   ├── assets
 * │   │   ├── css
-* │   │   │   └── index.css
-* │   │   │   └── search.css
-* │   │   │   └── Post.css
 * │   │   └── img
-* │   │       └── ****.png
-* │   │       └── ****.png
+* │   │   └── js
 * │   └── test.html
 * │
-* ├── server.js
-* │
-* └── views
-* │   ├── index.handlebars
+* ├── views
 * │   └── layouts
-* │        └── main.handlebars
-* │        
-* ├── Package.json
 * │
+* ├── server.js
+* ├── Package.json
+* ├── node_modules
 * └── Readme
 
 
