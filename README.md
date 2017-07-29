@@ -4,15 +4,14 @@ Hyper Local is a collection of guides for neighborhoods that are not on the grid
 
 A local insiders curated Field Guide to the lesser known local spots that fly under the radar. This is for people who love exploring new places or find themselves in a strange place with no resource to turn to. Like having your best friend with really good taste offering recommendations for what to see, where to eat or where to drink.
 
-*Input*
-User generated database of exceptional places based on geography (post req/res)
-Form inputs, validation and DB population
-Geo-location
-
-*Return*
-User controlled sorting based on activity and/or location (get req/res)
-Preview review of what makes the listing great.
-Up and down voting on listing
+*features*
+* User generated database of exceptional places based on geography (post req/res).
+* Form inputs, validation and DB population.
+* Google maps API -- Geo-location.
+* FireBase user authenication.
+* User controlled sorting based on activity and/or location (get req/res).
+* Preview review of what makes the listing great.
+* Up and down voting on listing.
 
 This document outlines the base requirements for Project 2.
 
