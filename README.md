@@ -15,6 +15,7 @@ A local insiders curated Field Guide to the lesser known local spots that fly un
 
 This document outlines the base requirements for Project 2.
 
+
 ## Team
 Fernando Medina /
 Nurul /
@@ -44,6 +45,7 @@ Your project must:
 
 * Meet good quality coding standards (indentation, scoping, naming).
 
+
 ### Suggestions
 Your project _should_:
 * Incorporate Basic Testing Framework, see [Project Suggestions](../Suggestions/README.md);
@@ -52,8 +54,8 @@ Your project _should_:
 * Use an existing public dataset to power the database
 * Create a migration strategy for sharing data across team members.
 
+
 ## Site directory architecture:
-________________________
 
 * ├── config
 * ├── controllers
