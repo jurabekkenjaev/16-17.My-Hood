@@ -6,7 +6,7 @@ var connection = mysql.createConnection({
   port: 3306,
   user: "e9qkycnbin0836a8",
   password: "mxpc6s4b7yfu1o14",
-  database: "c48hlfc6dh3pfva"
+  database: "c48hlfc6dgh3pfva"
 });
 
 // Connect to the mysql server and sql database
@@ -16,3 +16,6 @@ connection.connect(function(err) {
 });
 
 module.exports = connection;
+
+
+
