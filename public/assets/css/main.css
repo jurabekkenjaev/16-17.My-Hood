@@ -199,8 +199,10 @@ button:hover, input:hover {
 
 .SearchWrapper {
   width: 70%;
+  height: 100%;
   margin: 0 auto;
-  margin-top: 75px; }
+  margin-top: 75px;
+  overflow: visible;}
 
 .row {
   display: flex;
@@ -218,5 +220,6 @@ select {
 
 select:focus {
   outline: none; }
+
 
 /*# sourceMappingURL=main.css.map */

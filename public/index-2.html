@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Firebase Auth</title>
+    <title>MyHood</title>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Vast+Shadow" rel="stylesheet">
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+    
+  
 </head>
 
 <body>
@@ -57,8 +59,15 @@
                 <button class="post">
                     <h3 class="btnLabel"> I have a place to share</h3></button>
             </div>
+
+            <div id="map" style="width:700px; height:500px; margin-left:80px;"></div>
+
         </section>
+
+        
+        
     </main>
+
     <!-- modal window for sign-in -->
     <section class="modalDisplay signInModal">
         <div class="modalForm">
@@ -74,7 +83,10 @@
                     <label for="textPassword">Password</label>
                 </div>
                 <div class="Btn modalBtn boxStyle">
+                    <button id="btnLogin"><img src="public/images/key_solid-wht.svg" class="modalIcon" alt="Key icon" width="40">
+
                     <button id="btn-Login"><img src="public/images/key_solid-wht.svg" class="modalIcon" alt="Key icon" width="40">
+
                         <h3 class="navLabel">Log in</h3></button>
                 </div>
                 <div class="divider">or</div>
@@ -120,8 +132,12 @@
     <main>
         <p>Welcom to MyHood, a local insiders curated field guide to the lesser know local spots that fly under the radar. This is for people who love finding and exploring new places or who find themselves in a strange place with no resource to turn to. Chaperon, it's like having your best friend with really good taste offering recommendations for what to see, where to eat or where to drink.</p>
     </main> -->
+
+
 </body>
-<script src="app.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG3y33Xmtfr58E4Tkc8D1_TVRSZP4-y8Y&callback=initMap">
+    </script>
+<script src="../config/firebase.js"></script>
 <script>
 $(document).ready(function() {
 
@@ -152,6 +168,46 @@ $(document).ready(function() {
 
 
 });
+
+
+// //------------- Google Maps Home Page--------------------
+// var map, infoWindow;
+
+// function initMap() {
+//     map = new google.maps.Map(document.getElementById('map'), {
+//         center: { lat: 40.7963069, lng: -74.1082761 },
+//         zoom: 9
+//     });
+//     infoWindow = new google.maps.InfoWindow;
+
+//     // Try HTML5 geolocation.
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(function(position) {
+//             var pos = {
+//                 lat: position.coords.latitude,
+//                 lng: position.coords.longitude
+//             };
+
+//             infoWindow.setPosition(pos);
+//             infoWindow.setContent('Your Location');
+//             infoWindow.open(map);
+//             map.setCenter(pos);
+//         }, function() {
+//             handleLocationError(true, infoWindow, map.getCenter());
+//         });
+//     } else {
+//         // Browser doesn't support Geolocation
+//         handleLocationError(false, infoWindow, map.getCenter());
+//     }
+// }
+
+// function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+//     infoWindow.setPosition(pos);
+//     infoWindow.setContent(browserHasGeolocation ?
+//         'Error: The Geolocation service failed.' :
+//         'Error: Your browser doesn\'t support geolocation.');
+//     infoWindow.open(map);
+// }
 </script>
 
 </html>

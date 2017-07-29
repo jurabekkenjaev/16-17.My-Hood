@@ -26,6 +26,10 @@ body {
     flex: 3;
 }
 
+.SearchWrapper {
+    height: 100%;
+}
+
 .boxStyle {
     box-sizing: border-box;
     border: 1px solid $primaryColor;
