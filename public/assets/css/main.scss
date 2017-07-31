@@ -2,18 +2,18 @@
 @import 'signInModal';
 @import 'signUpModal';
 @import 'videoBG';
-@import 'responsive';
+
 
 
 body {
     width: 100%;
-    max-width: 1024px;
+    max-width: 1000px;
     margin: 0 auto;
     font: $fontBody;
 }
 
 .headWrapper {
-    padding: 6px 10px 10px;
+    padding: 6px 50px 10px;
     background-color: $bgColor;
     margin-top: 5px;
     display: flex;
@@ -26,15 +26,31 @@ body {
     flex: 3;
 }
 
+.navRow {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
 .SearchWrapper {
-    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.row {
+    @extend .navRow;
+}
+
+.col-6 {
+    flex-basis: 48%;
 }
 
 .boxStyle {
     box-sizing: border-box;
     border: 1px solid $primaryColor;
     padding: 10px 20px 10px;
-    margin-bottom: 5%;
+    margin-bottom: 30px;
     position: relative;
     /* for input label position*/
     text-align: center;
@@ -55,7 +71,7 @@ input {
 }
 
 label {
-    font: 300 .65em sans-serif;
+    font: $formFont;
     color: $secondaryColor;
     background-color: $bgColor;
     border: 1px solid $primaryColor;
@@ -98,10 +114,8 @@ button {
     line-height: 1.7;
     color: #fff;
     display: block;
-    background-color: transparent;
     position: relative;
     overflow: hidden;
-    /*font: $fontBody;*/
     width: 100%;
     text-align: left;
     cursor: pointer;
@@ -116,6 +130,10 @@ button:hover {
     height: 40px;
 }
 
+.btnLabel {
+    font: $formFont;
+}
+
 .Btn {
     box-sizing: border-box;
     border: 1px solid $secondaryColor;
@@ -124,6 +142,15 @@ button:hover {
     overflow: hidden;
 }
 
+.logContainer {
+    display: none;
+}
+.display {
+    display: flex;
+}
+.logIcon {
+    background-color: tomato;
+}
 /* icons for hover states */
 .icon {
     position: absolute;
@@ -144,22 +171,7 @@ button:hover {
     font-size: 2.3em;
     line-height: 1.25;
     color: $secondaryColor;
-    margin-bottom: 50px;
-}
-
-.SearchWrapper {
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 75px;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.col-6 {
-    flex-basis: 48%;
+    margin-bottom: 25px;
 }
 
 select {
@@ -174,7 +186,11 @@ select:focus {
     outline: none;
 }
 
+#map {
+    height: 300px;
+}
 
+@import 'responsive';
 
 
 

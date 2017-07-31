@@ -12,10 +12,6 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Vast+Shadow" rel="stylesheet">
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
-
-    
-    
-  
 </head>
 
 <body>
@@ -28,14 +24,23 @@
         <div class="logo">
             <h1>MyHood</h1>
         </div>
-        <div class="navLabel signIn">
-            <button id="btn-Login btnLogin"><img src="./assets/img/key_solid.svg" class="icon" alt="Key icon">
-                <h4> Log in </h4></button>
-        </div>
-        <div class="navLabel signUp">
-            <button id="btn-SignUp btnSignUp"><img src="./assets/img/sign-in.svg" class="icon" alt="sign-up icon">
-                <h4> Sign me up </h4></button>
-        </div>
+        <section class="navContainer navRow">
+            <div class="navLabel signInBtn">
+                <button id="btn-Login btnLogin"><img src="./assets/img/key_solid.svg" class="icon" alt="Key icon"><h4> Log in </h4></button>
+            </div>
+            <div class="navLabel signUpBtn">
+                <button id="btn-SignUp btnSignUp"><img src="./assets/img/sign-in.svg" class="icon" alt="sign-up icon"><h4> Sign me up </h4></button>
+            </div>
+        </section>
+        <!-- User logged in status -->
+        <section class="logContainer navRow">
+            <div class="logIcon">
+                <button id="headIcon"><img src="./assets/img/key_solid.svg" class="head" alt="head icon"></button>
+            </div>
+            <div class="logLabel navLabel">
+                <button id="btnLogout"><h4> Log me out </h4></button>
+            </div>
+        </section>
     </header>
     <main>
         <section class="SearchWrapper">
@@ -61,22 +66,16 @@
                 <button class="post">
                     <h3 class="btnLabel"> I have a place to share</h3></button>
             </div>
-
-            <div id="map" style="width:700px; height:250px; margin-left:80px;"></div>
-            <div class="test"></div>
-
+            <!-- google map for geo-location -->
+            <div id="map"></div>
         </section>
-
-        
-        
     </main>
-
     <!-- modal window for sign-in -->
     <section class="modalDisplay signInModal">
         <div class="modalForm">
             <div class="modalContent"><span class="xClose">&times;</span>
                 <div class="welcome">
-                    <h1>Welcome to the 'Hood', Glad to see you!</h1></div>
+                    <h1>Welcome to the 'Hood,<br />Glad to see you!</h1></div>
                 <div class="boxStyle col-6">
                     <input id="textEmail" class="validate" type="email" placeholder="Email address" required>
                     <label for="textEmail">email address</label>
@@ -85,33 +84,27 @@
                     <input id="textPassword" class="validate" type="password" placeholder="Password" required>
                     <label for="textPassword">Password</label>
                 </div>
-                <div class="Btn modalBtn boxStyle">
+                <div class="Btn btn-LogIn modalBtn boxStyle">
                     <button id="btnLogin"><img src="./assets/img/key_solid-wht.svg" class="modalIcon" alt="Key icon" width="40">
-
                         <h3 class="navLabel">Log in</h3></button>
                 </div>
                 <div class="divider">or</div>
-                <div class="Btn modalBtn boxStyle">
-                    <button id="btn-SignUp btnSignUp"><img src="./assets/img/sign-in-wht.svg" class="modalIcon" alt="sig in icon">
+                <div class="Btn btn-SignUp modalBtn boxStyle">
+                    <button id="btnSignUp"><img src="./assets/img/sign-in-wht.svg" class="modalIcon" alt="sig in icon">
                         <h3 class="navLabel">Sign me up</h3></button>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Sign-up modal form -->
     <section class="modalDisplay signUpModal">
         <div class="modalForm">
             <div class="modalContent"><span class="xClose">&times;</span>
                 <div class="welcome">
-                    <h1>Join the 'Hood'!</h1></div>
+                    <h1>Join the 'Hood!</h1></div>
                 <div class="boxStyle col-6">
-                    <input id="firstName" class="validate" type="text" placeholder="First Name" required>
-                    <label for="firstName">First Name</label>
-                </div>
-                <div class="boxStyle col-6">
-                    <input id="lastName" class="validate" type="text" placeholder="Last Name" required>
-                    <label for="lastName">Last Name</label>
+                    <input id="fullName" class="validate" type="text" placeholder="Enter Full Name" required>
+                    <label for="fullName">Full Name</label>
                 </div>
                 <div class="boxStyle col-6">
                     <input id="textPassword" class="validate" type="password" placeholder="Password" required>
@@ -122,8 +115,8 @@
                     <label for="textEmail">email address</label>
                 </div>
                 <div class="Btn modalBtn boxStyle">
-                    <button id="btn-Login"><img src="./assets/img/key_solid-wht.svg" class="modalIcon" alt="Key icon" width="40">
-                        <h3 class="navLabel">Post it! </h3></button>
+                    <button id="btn-Login"><img src="./assets/img/key_solid-wht.svg" class="modalIcon" alt="Key icon">
+                        <h3 class="navLabel">Sign Me Up! </h3></button>
                 </div>
             </div>
         </div>
@@ -134,46 +127,76 @@
     <main>
         <p>Welcom to MyHood, a local insiders curated field guide to the lesser know local spots that fly under the radar. This is for people who love finding and exploring new places or who find themselves in a strange place with no resource to turn to. Chaperon, it's like having your best friend with really good taste offering recommendations for what to see, where to eat or where to drink.</p>
     </main> -->
-
-
 </body>
 <script src="../config/firebase.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG3y33Xmtfr58E4Tkc8D1_TVRSZP4-y8Y&callback=initMap">
-    </script>
-
+</script>
 <script>
 $(document).ready(function() {
 
+    // handles the UI button hover for login/Signup event index page. 
     $('.navLabel').hover(function(e) {
         e.preventDefault();
         e.stopPropagation();
         $(this).find('.icon').toggleClass("iconDown");
     });
 
-    $('.signIn').on('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        // console.log('clicking');
-        $('.signInModal').toggleClass('modalDisplay');
-    });
-
-    $('.signUp').on('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $('.signUpModal').toggleClass('modalDisplay');
-    });
-
+// handles the UI button hover for login/Signup event modals.
     $('.modalBtn').hover(function(e) {
         e.preventDefault();
         e.stopPropagation();
         $(this).find('.modalIcon').toggleClass('iconRight');
     });
 
+    // handles Modal forms for either sign in or sign up events
+    $('.navContainer').on('click', '.signInBtn', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.signInModal').show();
+    });
 
-});
+    $('.navContainer').on('click', '.signUpBtn', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('clicking signUp')
+        $('.signUpModal').show();
+    });
+
+    // handles Modal appearance for form exit
+    $('.modalDisplay').on('click', '.xClose, .btn-LogIn, .btn-SignUp', function(e) {
+        e.preventDefault
+        e.stopPropagation
+        $('.signInModal, .signUpModal').hide();
+    });
+    // handles login submit from modal form
+    $('.modalForm').on('click', '.btn-LogIn', function(e) {
+        if (promise)
+        $('.navContainer').hide();
+        $('.logContainer').addClass('display');
+    });
 
 
+    // handles sign-up submit from modal form
+    $('.logContainer').on('click', '#btnLogout', function(e) {
+        $('.navContainer').show();
+        $('.logContainer').removeClass('display');
+    });
+}); // on document ready closing
 
+
+//===== just another way to handle modal appearence event. =====
+    // $('.signInBtn').on('click', function(e) {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     // console.log('clicking');
+    //     $('.signInModal').toggleClass('modalDisplay');
+    // });
+
+    // $('.signUpBtn').on('click', function(e) {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     $('.signUpModal').toggleClass('modalDisplay');
+    // });
 
 // //------------- Google Maps Home Page--------------------
 // var map, infoWindow;
@@ -213,8 +236,6 @@ $(document).ready(function() {
 //         'Error: Your browser doesn\'t support geolocation.');
 //     infoWindow.open(map);
 // }
-
-
 </script>
 
 </html>

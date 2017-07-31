@@ -24,21 +24,24 @@ const btnLogout = $("#btnLogout");
 // Add login event
 btnLogin.click(function() {
     console.log("clicked the login btn");
-    const email = textEmail.val();
-    const password = textPassword.val();
+    const email = textEmail.val().trim();
+    const password = textPassword.val().trim();
     const auth = firebase.auth();
 
-    // Sign In
+    // Sign In 
     const promise = auth.signInWithEmailAndPassword(email, password);
+    promise.catch(e => console.log('line34 message: ', e.message +"login event" + e));
 
-    promise.catch(e => console.log(e.message));
-
+// clears input after entry
+      textEmail.val("");
+      textPassword.val("");
 });
+
 
 
 // Add signup event
 btnSignUp.click(function() {
-    console.log("clicked login btn");
+    console.log("clicked Signup btn");
     const email = textEmail.val();
     const password = textPassword.val();
     const auth = firebase.auth();
@@ -46,8 +49,11 @@ btnSignUp.click(function() {
     // Create User
     const promise = auth.createUserWithEmailAndPassword(email, password);
 
-    promise.catch(e => console.log(e.message));
+    promise.catch(e => console.log('line49 message: ',e.message));
 
+// clears input after entry
+      textEmail.val("");
+      textPassword.val("");
 });
 
 btnLogout.click(function(e) {
@@ -77,7 +83,7 @@ var map, infoWindow;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 40.7963069, lng: -74.1082761 },
-        zoom: 9
+        zoom: 15
     });
     infoWindow = new google.maps.InfoWindow;
 

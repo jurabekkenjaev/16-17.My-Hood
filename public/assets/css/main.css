@@ -1,3 +1,8 @@
+/* -- Sass varaible declaration -- */
+/* -- $Typography -- */
+/* -- $color -- */
+/* -- $breakpoints -- */
+/* -- sign in modal window -- */
 /* modal sign-up window*/
 .modalForm {
   display: flex;
@@ -13,7 +18,6 @@
 
 /* The Close Button (x) upper right corner*/
 .xClose {
-  margin-bottom: 30px;
   position: absolute;
   right: 20px;
   top: 10px;
@@ -27,9 +31,14 @@
 
 .welcome h1 {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.7em;
   color: #999;
+  text-align: left;
+  /*width: 90%;*/
   margin-bottom: 40px; }
+
+.display {
+  display: none; }
 
 .modalDisplay {
   display: none;
@@ -37,13 +46,14 @@
 
 .modalContent {
   box-sizing: border-box;
-  background-color: #eee;
+  background-color: #F4F4F4;
+  z-index: 10;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   height: 85%;
-  width: 40%;
-  padding: 5%; }
+  width: 45%;
+  padding: 50px 5%; }
 
 .modalIcon {
   position: absolute;
@@ -65,6 +75,7 @@
   color: #999;
   font-size: .8em; }
 
+/* -- Video on landing pagew -- */
 video#bgvid {
   position: fixed;
   top: 50%;
@@ -78,31 +89,14 @@ video#bgvid {
   background: url(taco.jpg) no-repeat;
   background-size: cover; }
 
-/*-- Responsive breakpoints --*/
-@media screen and (min-width: 725px) and (max-width: 1000px) {
-  .modalContent {
-    width: 50%; } }
-@media screen and (min-width: 601px) and (max-width: 724px) {
-  .modalContent {
-    width: 70%; } }
-@media screen and (max-width: 600px) {
-  .modalContent {
-    width: 80%;
-    padding: 10%; }
-
-  .row {
-    display: block !important; } }
-@media screen and (max-width: 460px) {
-  .modalContent {
-    width: 90%; } }
 body {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1000px;
   margin: 0 auto;
   font: 300 1em "Merriweather", serif; }
 
 .headWrapper {
-  padding: 6px 10px 10px;
+  padding: 6px 50px 10px;
   background-color: #F4F4F4;
   margin-top: 5px;
   display: flex;
@@ -113,14 +107,24 @@ body {
   font: 400 2.25em "Vast Shadow", cursive;
   flex: 3; }
 
+.navRow, .row {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box; }
+
 .SearchWrapper {
-  height: 100%; }
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px; }
+
+.col-6 {
+  flex-basis: 48%; }
 
 .boxStyle {
   box-sizing: border-box;
   border: 1px solid #ec7705;
   padding: 10px 20px 10px;
-  margin-bottom: 5%;
+  margin-bottom: 30px;
   position: relative;
   /* for input label position*/
   text-align: center; }
@@ -136,7 +140,7 @@ input {
   color: #ec7705 !important; }
 
 label {
-  font: 300 .65em sans-serif;
+  font: 300 0.9em sans-serif;
   color: #999;
   background-color: #F4F4F4;
   border: 1px solid #ec7705;
@@ -150,7 +154,7 @@ label {
   transform: translateY(calc(-50% - 1px)); }
 
 input::placeholder {
-  font: 300 0.75em sans-serif;
+  font: 300 0.9em sans-serif;
   color: #999; }
 
 /* adds input field name to top of field test */
@@ -168,14 +172,12 @@ button, input {
   background-color: transparent;
   border-style: none;
   outline: none;
-  font: 300 0.75em sans-serif;
+  font: 300 0.9em sans-serif;
   line-height: 1.7;
   color: #fff;
   display: block;
-  background-color: transparent;
   position: relative;
   overflow: hidden;
-  /*font: $fontBody;*/
   width: 100%;
   text-align: left;
   cursor: pointer; }
@@ -187,12 +189,24 @@ button:hover, input:hover {
   color: #ec7705;
   height: 40px; }
 
+.btnLabel {
+  font: 300 0.9em sans-serif; }
+
 .Btn {
   box-sizing: border-box;
   border: 1px solid #999;
   margin-bottom: 30px;
   background-color: #999;
   overflow: hidden; }
+
+.logContainer {
+  display: none; }
+
+.display {
+  display: flex; }
+
+.logIcon {
+  background-color: tomato; }
 
 /* icons for hover states */
 .icon {
@@ -212,19 +226,7 @@ button:hover, input:hover {
   font-size: 2.3em;
   line-height: 1.25;
   color: #999;
-  margin-bottom: 50px; }
-
-.SearchWrapper {
-  width: 70%;
-  margin: 0 auto;
-  margin-top: 75px; }
-
-.row {
-  display: flex;
-  justify-content: space-between; }
-
-.col-6 {
-  flex-basis: 48%; }
+  margin-bottom: 25px; }
 
 select {
   width: 150%;
@@ -235,5 +237,45 @@ select {
 
 select:focus {
   outline: none; }
+
+#map {
+  height: 300px; }
+
+/*-- Responsive breakpoints --*/
+@media screen and (min-width: 725px) and (max-width: 1000px) {
+  .modalContent {
+    width: 65%; }
+
+  #map {
+    max-height: 400px; } }
+@media screen and (min-width: 601px) and (max-width: 724px) {
+  .modalContent {
+    width: 70%; }
+
+  #map {
+    height: 300px; } }
+@media screen and (max-width: 600px) {
+  .SearchWrapper {
+    margin-top: 20px !important; }
+
+  .modalContent {
+    width: 90%; }
+
+  .titleText {
+    font-size: 1.7em; }
+
+  .boxStyle {
+    margin-bottom: 15px; }
+
+  .row {
+    display: block; }
+
+  #map {
+    height: 250px; } }
+/*@media screen and (max-width: 460px) {
+    .modalContent {
+        width: 90%;
+    }
+}*/
 
 /*# sourceMappingURL=main.css.map */

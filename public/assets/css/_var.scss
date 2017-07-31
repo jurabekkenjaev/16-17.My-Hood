@@ -1,8 +1,13 @@
+/* -- Sass varaible declaration -- */
+
+/* -- $Typography -- */
 $fontBody: 300 1em 'Merriweather', serif;
 
 $fontLogo: 400 2.25em 'Vast Shadow', cursive;
 
-$formFont: 300 .75em sans-serif;
+$formFont: 300 .9em sans-serif;
+
+/* -- $color -- */
 
 $primaryColor: #ec7705;
 
@@ -10,3 +15,8 @@ $secondaryColor: #999;
 
 $bgColor: #F4F4F4;
 
+/* -- $breakpoints -- */
+
+$bpMobile: 600px;
+
+$bpTablet: 768px;
