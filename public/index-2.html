@@ -76,6 +76,7 @@
             <div class="modalContent"><span class="xClose">&times;</span>
                 <div class="welcome">
                     <h1>Welcome to the 'Hood,<br />Glad to see you!</h1></div>
+                    <div id="error" class="errHandle"></div>
                 <div class="boxStyle col-6">
                     <input id="textEmail" class="validate" type="email" placeholder="Email address" required>
                     <label for="textEmail">email address</label>
@@ -128,60 +129,11 @@
         <p>Welcom to MyHood, a local insiders curated field guide to the lesser know local spots that fly under the radar. This is for people who love finding and exploring new places or who find themselves in a strange place with no resource to turn to. Chaperon, it's like having your best friend with really good taste offering recommendations for what to see, where to eat or where to drink.</p>
     </main> -->
 </body>
-<script src="../config/firebase.js"></script>
+<script src="./assets/js/firebase.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG3y33Xmtfr58E4Tkc8D1_TVRSZP4-y8Y&callback=initMap">
 </script>
-<script>
-$(document).ready(function() {
+<script src="./assets/js/eventHandle.js"></script>
 
-    // handles the UI button hover for login/Signup event index page. 
-    $('.navLabel').hover(function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $(this).find('.icon').toggleClass("iconDown");
-    });
-
-// handles the UI button hover for login/Signup event modals.
-    $('.modalBtn').hover(function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $(this).find('.modalIcon').toggleClass('iconRight');
-    });
-
-    // handles Modal forms for either sign in or sign up events
-    $('.navContainer').on('click', '.signInBtn', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $('.signInModal').show();
-    });
-
-    $('.navContainer').on('click', '.signUpBtn', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        console.log('clicking signUp')
-        $('.signUpModal').show();
-    });
-
-    // handles Modal appearance for form exit
-    $('.modalDisplay').on('click', '.xClose, .btn-LogIn, .btn-SignUp', function(e) {
-        e.preventDefault
-        e.stopPropagation
-        $('.signInModal, .signUpModal').hide();
-    });
-    // handles login submit from modal form
-    $('.modalForm').on('click', '.btn-LogIn', function(e) {
-        if (promise)
-        $('.navContainer').hide();
-        $('.logContainer').addClass('display');
-    });
-
-
-    // handles sign-up submit from modal form
-    $('.logContainer').on('click', '#btnLogout', function(e) {
-        $('.navContainer').show();
-        $('.logContainer').removeClass('display');
-    });
-}); // on document ready closing
 
 
 //===== just another way to handle modal appearence event. =====
