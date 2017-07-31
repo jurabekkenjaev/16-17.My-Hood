@@ -7,6 +7,8 @@
 }
 
 
+
+
 /* modal sign-up window*/
 
 .modalForm {
@@ -21,38 +23,21 @@
 }
 
 
-/* The Close Button (x) upper right corner*/
 
-.xClose {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    color: $secondaryColor;
-    font-size: 1.7em;
-}
 
-.xClose:hover,
-.xClose:focus {
-    color: $primaryColor;
-    cursor: pointer;
-}
-
-.welcome h1 {
-    text-align: center;
-    font-size: 1.7em;
-    color: $secondaryColor;
-    text-align: left;
-    /*width: 90%;*/
-    margin-bottom: 40px;
-}
+/* handles submit events from login submit and Sign-up modal forms*/
 
 .display {
     display: none;
+    transform: all .35s ease-in;
 }
+
+
+
+/* hides appearance of login and Sign-up modal forms until asked for*/
 
 .modalDisplay {
     display: none;
-    transform: all .35s ease-in;
 }
 
 .modalContent {
@@ -65,6 +50,43 @@
     height: 85%;
     width: 45%;
     padding: 50px 5%;
+}
+
+
+
+/* The Close Button (x) upper right corner*/
+
+.xClose {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: $secondaryColor;
+    font-size: 1.7em;
+
+
+    &:hover,
+    &:focus {
+        color: $primaryColor;
+        cursor: pointer;
+    }
+}
+
+
+.welcome h1 {
+    text-align: center;
+    font-size: 1.7em;
+    color: $secondaryColor;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.errDisplay {
+    background-color: $ErrorColor;
+    font: $formFont;
+    border: 1px solid $ErrorColor;
+    padding: 10px 20px 10px;
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .modalIcon {

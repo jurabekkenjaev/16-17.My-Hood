@@ -1,5 +1,4 @@
 $(document).ready(function() {
-console.log("Loaded event handlers"); 
 
     // handles the UI button hover for login/Signup event index page. 
     $('.navLabel').hover(function(e) {
@@ -30,14 +29,14 @@ console.log("Loaded event handlers");
     });
 
     // handles Modal appearance for form exit
-    $('.modalDisplay').on('click', '.xClose, .btn-LogIn, .btn-SignUp', function(e) {
+    $('.modalDisplay').on('click', '.xClose, .btn-SignUp', function(e) {
         e.preventDefault
         e.stopPropagation
         $('.signInModal, .signUpModal').hide();
+
     });
-    // handles login submit from modal form
+    // handles login submit on modal to displays login message (upper right of index-page)
     $('.modalForm').on('click', '.btn-LogIn', function(e) {
-        if (promise)
         $('.navContainer').hide();
         $('.logContainer').addClass('display');
     });
@@ -49,3 +48,20 @@ console.log("Loaded event handlers");
         $('.logContainer').removeClass('display');
     });
 }); // on document ready closing
+
+
+//============================================================================
+//========== just another way to handle modal appearence event. ==============
+
+    // $('.signInBtn').on('click', function(e) {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     // console.log('clicking');
+    //     $('.signInModal').toggleClass('modalDisplay');
+    // });
+
+    // $('.signUpBtn').on('click', function(e) {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     $('.signUpModal').toggleClass('modalDisplay');
+    // });

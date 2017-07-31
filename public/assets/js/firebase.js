@@ -32,15 +32,26 @@ btnLogin.click(function() {
     const promise = auth.signInWithEmailAndPassword(email, password);
     //promise.catch(e => console.log('line34 message: ', e.message +"login event" + e));
     promise.catch(function(e) {
-        console.log(e)
-        var err = document.getElementById('error')
-        console.log(e.message)
-        err.innerHTML = e.message;
-    })
+        if (e.code) {
+            console.log(e)
+            console.log('error code: ', e.code);
+            console.log(e.message)
 
-// clears input after entry
-      textEmail.val("");
-      textPassword.val("");
+            var getElem = document.querySelector('errHandle');
+            var err = document.getElementById('error');
+            getElem.classList.add('errDisplay');
+            err.innerHTML = e.message;
+
+        } else {
+            var getElem = document.querySelector('errHandle');
+            var submitLogIn = document.querySelector('submit-LogIn')
+            getElem.classList.remove('errDisplay');
+            submitLogIn.classList.add('btn-logIn');
+            // clears input after entry
+            textEmail.val("");
+            textPassword.val("");
+        }
+    });
 });
 
 
@@ -55,11 +66,11 @@ btnSignUp.click(function() {
     // Create User
     const promise = auth.createUserWithEmailAndPassword(email, password);
 
-    promise.catch(e => console.log('line49 message: ',e.message));
+    promise.catch(e => console.log('line49 message: ', e.message));
 
-// clears input after entry
-      textEmail.val("");
-      textPassword.val("");
+    // clears input after entry
+    textEmail.val("");
+    textPassword.val("");
 });
 
 btnLogout.click(function(e) {
