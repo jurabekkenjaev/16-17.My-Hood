@@ -5,8 +5,12 @@
 /* -- sign in modal window -- */
 /* modal sign-up window*/
 .modalForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -16,6 +20,29 @@
   /* The Fallback */
   background: rgba(0, 0, 0, 0.85); }
 
+/* handles submit events from login submit and Sign-up modal forms*/
+.display {
+  display: none;
+  -webkit-transform: all .35s ease-in;
+          transform: all .35s ease-in; }
+
+/* hides appearance of login and Sign-up modal forms until asked for*/
+.modalDisplay {
+  display: none; }
+
+.modalContent {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #F4F4F4;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 85%;
+  width: 45%;
+  padding: 50px 5%; }
+
 /* The Close Button (x) upper right corner*/
 .xClose {
   position: absolute;
@@ -23,37 +50,24 @@
   top: 10px;
   color: #999;
   font-size: 1.7em; }
-
-.xClose:hover,
-.xClose:focus {
-  color: #ec7705;
-  cursor: pointer; }
+  .xClose:hover, .xClose:focus {
+    color: #ec7705;
+    cursor: pointer; }
 
 .welcome h1 {
   text-align: center;
   font-size: 1.7em;
   color: #999;
   text-align: left;
-  /*width: 90%;*/
   margin-bottom: 40px; }
 
-.display {
-  display: none; }
-
-.modalDisplay {
-  display: none;
-  transform: all .35s ease-in; }
-
-.modalContent {
-  box-sizing: border-box;
-  background-color: #F4F4F4;
-  z-index: 10;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 85%;
-  width: 45%;
-  padding: 50px 5%; }
+.errDisplay {
+  background-color: red;
+  font: 300 0.9em sans-serif;
+  border: 1px solid red;
+  padding: 10px 20px 10px;
+  margin-bottom: 20px;
+  position: relative; }
 
 .modalIcon {
   position: absolute;
@@ -65,8 +79,10 @@
 
 .iconRight {
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   opacity: 1;
+  -webkit-transition: all 0.55s cubic-bezier(0.31, -0.105, 0.43, 1.4);
   transition: all 0.55s cubic-bezier(0.31, -0.105, 0.43, 1.4); }
 
 .divider {
@@ -85,7 +101,8 @@ video#bgvid {
   width: auto;
   height: auto;
   z-index: -100;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   background: url(taco.jpg) no-repeat;
   background-size: cover; }
 
@@ -99,18 +116,31 @@ body {
   padding: 6px 50px 10px;
   background-color: #F4F4F4;
   margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center; }
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .logo {
   font: 400 2.25em "Vast Shadow", cursive;
-  flex: 3; }
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3; }
 
 .navRow, .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  box-sizing: border-box; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 .SearchWrapper {
   width: 80%;
@@ -118,13 +148,15 @@ body {
   margin-top: 30px; }
 
 .col-6 {
-  flex-basis: 48%; }
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%; }
 
 .boxStyle {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: 1px solid #ec7705;
   padding: 10px 20px 10px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   position: relative;
   /* for input label position*/
   text-align: center; }
@@ -150,8 +182,18 @@ label {
   left: 20px;
   opacity: 1;
   padding: 0 5px;
+  -webkit-transition: all 0.35s;
   transition: all 0.35s;
-  transform: translateY(calc(-50% - 1px)); }
+  -webkit-transform: translateY(calc(-50% - 1px));
+          transform: translateY(calc(-50% - 1px)); }
+
+input::-webkit-input-placeholder {
+  font: 300 0.9em sans-serif;
+  color: #999; }
+
+input:-ms-input-placeholder {
+  font: 300 0.9em sans-serif;
+  color: #999; }
 
 input::placeholder {
   font: 300 0.9em sans-serif;
@@ -160,7 +202,8 @@ input::placeholder {
 /* adds input field name to top of field test */
 input:placeholder-shown + label {
   opacity: 0;
-  transform: translateY(100%); }
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%); }
 
 input:focus {
   outline: none;
@@ -168,7 +211,8 @@ input:focus {
 
 /*. Unversal button style for all pages and forms*/
 button, input {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: transparent;
   border-style: none;
   outline: none;
@@ -193,7 +237,8 @@ button:hover, input:hover {
   font: 300 0.9em sans-serif; }
 
 .Btn {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: 1px solid #999;
   margin-bottom: 30px;
   background-color: #999;
@@ -203,6 +248,8 @@ button:hover, input:hover {
   display: none; }
 
 .display {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
 
 .logIcon {
@@ -215,7 +262,9 @@ button:hover, input:hover {
   top: -30px;
   width: 20px;
   height: 17px;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
   transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4); }
 
 .iconDown {
@@ -232,7 +281,9 @@ select {
   width: 150%;
   border: none;
   background: transparent;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   text-overflow: clip; }
 
 select:focus {
