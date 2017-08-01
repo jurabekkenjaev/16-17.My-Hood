@@ -1,7 +1,7 @@
 /*
 Error: File to import not found or unreadable: var.
-       Load path: /Users/rspica/RBC/RBC-Homework/controversy/public/assets/css/header to sort
-        on line 1 of /Users/rspica/RBC/RBC-Homework/controversy/public/assets/css/header to sort/header.scss
+       Load path: /Users/Admin/rutgerswork/RBC-homework/controversy/public/assets/css/header to sort
+        on line 1 of /Users/Admin/rutgerswork/RBC-homework/controversy/public/assets/css/header to sort/header.scss
 
 1: @import 'var';
 2: 
@@ -11,7 +11,7 @@ Error: File to import not found or unreadable: var.
 6:     max-width: 1024px;
 
 Backtrace:
-/Users/rspica/RBC/RBC-Homework/controversy/public/assets/css/header to sort/header.scss:1
+/Users/Admin/rutgerswork/RBC-homework/controversy/public/assets/css/header to sort/header.scss:1
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:45:in `import'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -49,4 +49,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: var.\A        Load path: /Users/rspica/RBC/RBC-Homework/controversy/public/assets/css/header to sort\A         on line 1 of /Users/rspica/RBC/RBC-Homework/controversy/public/assets/css/header to sort/header.scss\A \A 1: @import 'var';\A 2: \A 3: \A 4: body {\A 5:     width: 100%;\A 6:     max-width: 1024px;"; }
+  content: "Error: File to import not found or unreadable: var.\A        Load path: /Users/Admin/rutgerswork/RBC-homework/controversy/public/assets/css/header to sort\A         on line 1 of /Users/Admin/rutgerswork/RBC-homework/controversy/public/assets/css/header to sort/header.scss\A \A 1: @import 'var';\A 2: \A 3: \A 4: body {\A 5:     width: 100%;\A 6:     max-width: 1024px;"; }

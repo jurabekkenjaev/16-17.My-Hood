@@ -56,6 +56,11 @@ body {
     text-align: center;
 }
 
+    p.description {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
 /*  overflow controls the select dropdown arrows*/
 .overflow {
     overflow: hidden;

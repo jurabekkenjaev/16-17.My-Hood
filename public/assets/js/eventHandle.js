@@ -7,7 +7,7 @@ $(document).ready(function() {
         $(this).find('.icon').toggleClass("iconDown");
     });
 
-// handles the UI button hover for login/Signup event modals.
+// handles the UI button hover for login/Signup event in modals.
     $('.modalBtn').hover(function(e) {
         e.preventDefault();
         e.stopPropagation();
