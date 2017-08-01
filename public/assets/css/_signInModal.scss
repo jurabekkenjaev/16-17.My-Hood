@@ -47,8 +47,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    height: 85%;
-    width: 45%;
+    width: 50%;
     padding: 50px 5%;
 }
 
@@ -83,11 +82,16 @@
 .errDisplay {
     background-color: $ErrorColor;
     font: $formFont;
+    color: $bgColor;
     border: 1px solid $ErrorColor;
     padding: 10px 20px 10px;
     margin-bottom: 20px;
     position: relative;
 }
+
+.errDisplay:before {
+        content: 'Attention: ';
+    }
 
 .modalIcon {
     position: absolute;
@@ -105,9 +109,25 @@
     transition: all .55s cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
 
-.divider {
+.dividerOr {
     text-align: center;
     margin-bottom: 30px;
     color: $secondaryColor;
     font-size: .8em;
+    position: relative;
 }
+
+.dividerOr:before, .dividerOr:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 45%;
+    top: 9px;
+    border-bottom: 1px solid $secondaryColor;
+}
+
+.dividerOr:after {
+    right: 0;
+}
+
+

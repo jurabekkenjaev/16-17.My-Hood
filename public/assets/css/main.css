@@ -39,8 +39,7 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  height: 85%;
-  width: 45%;
+  width: 50%;
   padding: 50px 5%; }
 
 /* The Close Button (x) upper right corner*/
@@ -64,10 +63,14 @@
 .errDisplay {
   background-color: red;
   font: 300 0.9em sans-serif;
+  color: #F4F4F4;
   border: 1px solid red;
   padding: 10px 20px 10px;
   margin-bottom: 20px;
   position: relative; }
+
+.errDisplay:before {
+  content: 'Attention: '; }
 
 .modalIcon {
   position: absolute;
@@ -85,11 +88,23 @@
   -webkit-transition: all 0.55s cubic-bezier(0.31, -0.105, 0.43, 1.4);
   transition: all 0.55s cubic-bezier(0.31, -0.105, 0.43, 1.4); }
 
-.divider {
+.dividerOr {
   text-align: center;
   margin-bottom: 30px;
   color: #999;
-  font-size: .8em; }
+  font-size: .8em;
+  position: relative; }
+
+.dividerOr:before, .dividerOr:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 45%;
+  top: 9px;
+  border-bottom: 1px solid #999; }
+
+.dividerOr:after {
+  right: 0; }
 
 /* -- Video on landing pagew -- */
 video#bgvid {

@@ -20,6 +20,14 @@ const btnLogin = $("#btnLogin");
 const btnSignUp = $("#btnSignUp");
 const btnLogout = $("#btnLogout");
 
+// form validation function 
+function addClass(getElem) {
+    getElem.classList.add('errDisplay');
+}
+
+function removeClass(getElem) {
+    getElem.classList.remove('errDisplay');
+}
 
 // Add login event
 btnLogin.click(function() {
@@ -33,20 +41,17 @@ btnLogin.click(function() {
     //promise.catch(e => console.log('line34 message: ', e.message +"login event" + e));
     promise.catch(function(e) {
         if (e.code) {
-            console.log(e)
-            console.log('error code: ', e.code);
-            console.log(e.message)
-
-            var getElem = document.querySelector('errHandle');
+            var getElem = document.querySelector('.errHandle');
             var err = document.getElementById('error');
-            getElem.classList.add('errDisplay');
+            addClass(getElem);
             err.innerHTML = e.message;
 
         } else {
-            var getElem = document.querySelector('errHandle');
-            var submitLogIn = document.querySelector('submit-LogIn')
-            getElem.classList.remove('errDisplay');
+    
+            var submitLogIn = document.querySelector('submit-LogIn');
+            removeClass(getElem);
             submitLogIn.classList.add('btn-logIn');
+
             // clears input after entry
             textEmail.val("");
             textPassword.val("");
@@ -59,18 +64,32 @@ btnLogin.click(function() {
 // Add signup event
 btnSignUp.click(function() {
     console.log("clicked Signup btn");
-    const email = textEmail.val();
-    const password = textPassword.val();
+    const fullName = textfullName.val().trim
+    const email = textEmail.val().trim;
+    const password = textPassword.val().trim;
     const auth = firebase.auth();
 
     // Create User
     const promise = auth.createUserWithEmailAndPassword(email, password);
 
-    promise.catch(e => console.log('line49 message: ', e.message));
+    promise.catch(function(e) {
+        if (e.code) {
+            var getElem = document.querySelector('.errHandle');
+            var err = document.getElementById('error');
+            addClass(getElem)
+            err.innerHTML = e.message;
 
-    // clears input after entry
-    textEmail.val("");
-    textPassword.val("");
+        } else {
+            var getElem = document.querySelector('.errHandle');
+            var submitLogIn = document.querySelector('submit-LogIn')
+            getElem.classList.remove('errDisplay');
+            submitLogIn.classList.add('btn-logIn');
+
+            // clears input after entry
+            textEmail.val("");
+            textPassword.val("");
+        }
+    });
 });
 
 btnLogout.click(function(e) {
