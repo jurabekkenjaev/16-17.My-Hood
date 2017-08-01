@@ -24,12 +24,15 @@
         <div class="logo">
             <h1>MyHood</h1>
         </div>
+        <!-- sign-up log-in navigation -->
         <section class="navContainer navRow">
             <div class="navLabel signInBtn">
-                <button id="btn-Login btnLogin"><img src="./assets/img/key_solid.svg" class="icon" alt="Key icon"><h4> Log in </h4></button>
+                <button id="btn-Login btnLogin"><img src="./assets/img/key_solid.svg" class="icon" alt="Key icon">
+                    <h4> Log in </h4></button>
             </div>
             <div class="navLabel signUpBtn">
-                <button id="btn-SignUp btnSignUp"><img src="./assets/img/sign-in.svg" class="icon" alt="sign-up icon"><h4> Sign me up </h4></button>
+                <button id="btn-SignUp btnSignUp"><img src="./assets/img/sign-in.svg" class="icon" alt="sign-up icon">
+                    <h4> Sign me up </h4></button>
             </div>
         </section>
         <!-- User logged in status -->
@@ -38,36 +41,23 @@
                 <button id="headIcon"><img src="./assets/img/key_solid.svg" class="head" alt="head icon"></button>
             </div>
             <div class="logLabel navLabel">
-                <button id="btnLogout"><h4> Log me out </h4></button>
+                <button id="btnLogout">
+                    <h4> Log me out </h4></button>
             </div>
         </section>
     </header>
     <main>
         <section class="SearchWrapper">
-            <h1 class="titleText">Find awesome that Yelp and Four Square only dream about</h1>
-            <div class="row">
-                <div class="boxStyle col-6">
-                    <input type="text" name="location" class="validate" placeholder="where do you want to go city or town" reqiured>
-                    <label for="location">City or town</label>
-                </div>
-                <div class="boxStyle overflow col-6">
-                    <select id="quest-4" class="qValid" name="venue" required>
-                        <option value="" disabled selected hidden>What are you looking for...</option>
-                        <option value=""> | Breakfast | </option>
-                        <option value=""> | Lunch | </option>
-                        <option value=""> | Dinner | </option>
-                        <option value=""> | Coffee &amp; Tea | </option>
-                        <option value=""> | Nightlife | </option>
-                        <option value=""> | Things to do | </option>
-                    </select>
+            <h1 class="titleText">Find awesome that Yelp and Four Square only dream about...</h1>
+            <p class="description">Welcome to MyHood, a local field guide curated by insiders to the lesser known local spots that fly under the radar. MyHood is for people who love finding and exploring new places or who find themselves in a strange place with no resource to turn to.
+                <br />
+                <br />MyHood, it's like having your best friend with really good taste offering recommendations for what to see, where to eat or where to drink.</p>
+            <div class="navContainer topSpacer">
+                <div class="Btn signUpBtn modalBtn boxStyle">
+                    <button id="btnSignUp"><img src="./assets/img/sign-in-wht.svg" class="modalIcon" alt="sig in icon">
+                        <h3 class="navLabel">Sign me up</h3></button>
                 </div>
             </div>
-            <div class="Btn btnLabel boxStyle">
-                <button class="post">
-                    <h3 class="btnLabel"> I have a place to share</h3></button>
-            </div>
-            <!-- google map for geo-location -->
-            <div id="map"></div>
         </section>
     </main>
     <!-- modal window for sign-in -->
@@ -76,8 +66,8 @@
             <div class="modalContent"><span class="xClose">&times;</span>
                 <div class="welcome">
                     <h1>Welcome to the 'Hood,<br />Glad to see you!</h1></div>
-                    <div class="errHandle"><span id="error"></span>
-                    </div>
+                <div class="errHandle"><span id="error"></span>
+                </div>
                 <div class="boxStyle col-6">
                     <input id="textEmail" class="validate" type="email" placeholder="Email address" required>
                     <label for="textEmail">email address</label>
@@ -104,8 +94,9 @@
             <div class="modalContent"><span class="xClose">&times;</span>
                 <div class="welcome">
                     <h1>Join the 'Hood!</h1></div>
-                    <div class="errHandle"><h4></h4><span id="error"></span>
-                    </div>
+                <div class="errHandle">
+                    <h4></h4><span id="error"></span>
+                </div>
                 <div class="boxStyle col-6">
                     <input id="fullName" class="validate" type="text" placeholder="Enter Full Name" required>
                     <label for="fullName">Full Name</label>
@@ -125,22 +116,11 @@
             </div>
         </div>
     </section>
-    <!--     <button id="btn-Logout" class="btn-style btn-action hide"> Log out </button>
-        </form>
-    </header>
-    <main>
-        <p>Welcom to MyHood, a local insiders curated field guide to the lesser know local spots that fly under the radar. This is for people who love finding and exploring new places or who find themselves in a strange place with no resource to turn to. Chaperon, it's like having your best friend with really good taste offering recommendations for what to see, where to eat or where to drink.</p>
-    </main> -->
 </body>
 <script src="./assets/js/firebase.js"></script>
 <script src="./assets/js/eventHandle.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG3y33Xmtfr58E4Tkc8D1_TVRSZP4-y8Y&callback=initMap">
-</script>
-
-
-
-
-
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG3y33Xmtfr58E4Tkc8D1_TVRSZP4-y8Y&callback=initMap">
+</script> -->
 <!--
 // //------------- Google Maps Home Page--------------------
 // var map, infoWindow;
@@ -180,6 +160,5 @@
 //         'Error: Your browser doesn\'t support geolocation.');
 //     infoWindow.open(map);
 // } -->
-
 
 </html>

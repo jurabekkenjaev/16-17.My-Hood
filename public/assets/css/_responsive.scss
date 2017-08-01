@@ -19,9 +19,22 @@
 }
 
 @media screen and (max-width: 600px) {
-    .SearchWrapper {
-        margin-top: 20px !important;
+
+    .logo {
+    font-size: 1.7em;
+}
+    .headWrapper {
+        padding: 6px 15px 10px;
     }
+    .SearchWrapper {
+        margin-top: 20px;
+            width: 90%;
+    }
+
+    p.description {
+        font-size: .85em;
+    }
+
     .modalContent {
         width: 90%;
     }
