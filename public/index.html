@@ -26,14 +26,17 @@
         </div>
         <!-- sign-up log-in navigation -->
         <section class="navContainer navRow">
+
             <div class="navLabel signInBtn">
                 <button id="btn-Login btnLogin"><img src="./assets/img/key_solid.svg" class="icon" alt="Key icon">
                     <h4> Log in </h4></button>
             </div>
+
             <div class="navLabel signUpBtn">
                 <button id="btn-SignUp btnSignUp"><img src="./assets/img/sign-in.svg" class="icon" alt="sign-up icon">
                     <h4> Sign me up </h4></button>
             </div>
+
         </section>
         <!-- User logged in status -->
         <section class="logContainer navRow">
@@ -94,35 +97,47 @@
             <div class="modalContent"><span class="xClose">&times;</span>
                 <div class="welcome">
                     <h1>Join the 'Hood!</h1></div>
-                <div class="errHandle">
-                    <h4></h4><span id="error"></span>
+                <div class="errHandle"><span class="error"></span>
                 </div>
                 <div class="boxStyle col-6">
-                    <input id="fullName" class="validate" type="text" placeholder="Enter Full Name" required>
-                    <label for="fullName">Full Name</label>
+                    <input id="signUpName" class="validate" type="text" placeholder="Enter Full Name" required>
+                    <label for="signUpName">Full Name</label>
+                </div>
+
+                <div class="boxStyle col-6">
+                    <input id="signUpEmail" class="validate" type="email" placeholder="Email address" required>
+                    <label for="signUpEmail">email address</label>
                 </div>
                 <div class="boxStyle col-6">
-                    <input id="textPassword" class="validate" type="password" placeholder="Password" required>
-                    <label for="textPassword">Password</label>
+                    <input id="signUpPassword" class="validate" type="password" placeholder="Password" required>
+                    <label for="signUpEmail">Password</label>
                 </div>
-                <div class="boxStyle col-6">
-                    <input id="textEmail" class="validate" type="email" placeholder="Email address" required>
-                    <label for="textEmail">email address</label>
-                </div>
-                <div class="Btn modalBtn boxStyle">
-                    <button id="btn-Login"><img src="./assets/img/key_solid-wht.svg" class="modalIcon" alt="Key icon">
+
+                
+
+                <div id="modalSignUpBtn" class="btnSignUp Btn modalBtn boxStyle">
+                    <button id="btnSignUp"><img src="./assets/img/key_solid-wht.svg" class="modalIcon" alt="Key icon">
                         <h3 class="navLabel">Sign Me Up! </h3></button>
                 </div>
             </div>
         </div>
     </section>
+
+<!--     <script>
+
+    $(".modalContent").on('click', '#btnSignUp', function () {
+        console.log("clicking signupppppppp")
+    })
+
+</script> -->
 </body>
 <script src="./assets/js/firebase.js"></script>
 <script src="./assets/js/eventHandle.js"></script>
+
 <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG3y33Xmtfr58E4Tkc8D1_TVRSZP4-y8Y&callback=initMap">
 </script> -->
 <!--
-// //------------- Google Maps Home Page--------------------
+// //- Google Maps Home Page -
 // var map, infoWindow;
 
 // function initMap() {
