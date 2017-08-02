@@ -1,34 +1,32 @@
-//Create all the functions that will do the routing for app, and the logic of each route.
+//This file offers a set of routes for sending users to various html pages.
 
-
-var express = require('express');
+//Dependencies
 var path = require('path');
-//Import the model (model) to use its database functions.
 //-------------
 
-//Export routes to server.js
+//Routes
 
 module.exports = function(app) {
-//Create all our routes and set up logic within those routes where required.
+
+//index route loads home.html
+app.get('/', function (req, res) {
+	//console.log("Route found!");
+	res.sendFile(path.join(__dirname, "../public/index.html"));
+});
+
 app.get('/index', function (req, res) {
-	console.log("Route found!");
-	res.sendFile(path.join(__dirname, "../public/index-2.html"));
-	});
+	//console.log("Route found!");
+	res.sendFile(path.join(__dirname, "../public/index.html"));
+});
 
+//postVenue route loads postVenue.html
 app.get('/postVenue', function (req, res) {
-		console.log("Info route found!");
-		res.sendFile(path.join(__dirname, "/../public/postVenue.html"));
-	});
+		//console.log("Info route found!");
+	res.sendFile(path.join(__dirname, "/../public/postVenue.html"));
+});
 
+//search route loads search.html
 app.get("/test", function(req, res) {
-	res.sendFile(path.join(__dirname, "/../public/test.html"));
-	});
-app.get("/", function(req, res) {
-	res.sendFile(path.join(__dirname, "/../public/index-2.html"));
-	});
-// app.post('/info/create', function (req, res) {
-// 	console.log("Post route found!");
-// 		res.rend('/');
-// 	});
-
+	res.sendFile(path.join(__dirname, "/../public/search.html"));
+});
 }
