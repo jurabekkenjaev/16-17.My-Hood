@@ -1,3 +1,5 @@
+
+
 //This file offers a set of routes for sending users to various html pages.
 
 //Dependencies
@@ -26,7 +28,7 @@ app.get('/postVenue', function (req, res) {
 });
 
 //search route loads search.html
-app.get("/test", function(req, res) {
+app.get("/search", function(req, res) {
 	res.sendFile(path.join(__dirname, "/../public/search.html"));
 });
 }
