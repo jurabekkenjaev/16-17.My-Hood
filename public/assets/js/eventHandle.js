@@ -39,7 +39,7 @@ $(document).ready(function() {
     $('.modalDisplay').on('click', '.xClose, .btn-SignUp', function(e) {
         e.preventDefault
         e.stopPropagation
-        $('.signInModal, .signUpModal').hide();
+        $('.signInModal, .signUpModal, .postModal').hide();
 
     });
     // handles login submit on modal to displays login message (upper right of index-page)
