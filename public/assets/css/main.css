@@ -136,7 +136,7 @@ body {
   font: 400 2.25em "Vast Shadow", cursive;
   flex: 3; }
 
-.navRow, .row {
+.row {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box; }
@@ -146,8 +146,16 @@ body {
   margin: 0 auto;
   margin-top: 30px; }
 
-.col-6 {
-  flex-basis: 48%; }
+.col-3 {
+  margin-right: 10px; }
+  .col-3:last-child {
+    margin-right: 0; }
+
+.flexSize {
+  flex: 1; }
+
+.flexSize1 {
+  flex: -4; }
 
 .boxStyle {
   box-sizing: border-box;
@@ -184,11 +192,13 @@ input {
 
 textarea {
   width: 100%; }
+  textarea:placeholder {
+    text-align: left; }
 
 label {
   font: 300 0.9em sans-serif;
   color: #999;
-  background-color: #F4F4F4;
+  background-color: white;
   border: 1px solid #ec7705;
   border-width: 0 1px 0 1px;
   position: absolute;
