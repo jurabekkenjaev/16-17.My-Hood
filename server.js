@@ -26,7 +26,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static(path.join(__dirname, './public')))
 
-//ROUTES
+//ROUTESgit
 require("./controllers/apiPostRoutes.js")(app);
 require("./controllers/apiSearchRoutes.js")(app);
 require("./controllers/htmlRoutes.js")(app);
