@@ -15,35 +15,30 @@
 </head>
 
 <body>
-    <video playsinline autoplay muted loop poster="taco.jpg" id="bgvid">
-        <source src="taco.webm" type="video/webm">
-        <source src="taco.mp4" type="video/mp4">
-    </video>
     <!-- header -->
     <header class="headWrapper">
         <div class="logo">
-            <h1>MyHood</h1>
+            <h1>Localize</h1>
         </div>
-
         <!-- User logged in status -->
-        <section class="logContainer navRow">
-            <div class="logIcon">
-                <button id="headIcon"><img src="./assets/img/key_solid.svg" class="head" alt="head icon"></button>
+        <section class="row">
+            <div class="logLabel">
+                <img src="./assets/img/loginHead.svg" class="head" alt="head icon">
             </div>
-            <div class="logLabel navLabel">
-                <button id="btnLogout"><h4> Log me out </h4></button>
+            <div class="navLabel signUpBtn">
+                <button id="btn-Logout">
+                    <h4> Log me out </h4></button>
             </div>
-        </section>
     </header>
     <main>
         <section class="SearchWrapper">
-            <h1 class="titleText">Lets find awesome</h1>
+            <h1 class="titleText">Find awesome</h1>
             <div class="row">
-                <div class="boxStyle col-6">
-                    <input type="text" name="location" class="validate" placeholder="where do you want to go city or town" reqiured>
+                <div class="boxStyle col-3 flexSize">
+                    <input type="text" name="location" class="validate" placeholder="Name your city or town" reqiured>
                     <label for="location">City or town</label>
                 </div>
-                <div class="boxStyle overflow col-6">
+                <div class="boxStyle col-3 overflow flexSize">
                     <select id="quest-4" class="qValid" name="venue" required>
                         <option value="" disabled selected hidden>What are you looking for...</option>
                         <option value=""> | Breakfast | </option>
@@ -54,30 +49,63 @@
                         <option value=""> | Things to do | </option>
                     </select>
                 </div>
+                <div class="Btn boxStyle col-3 flexSize1">
+                    <button class="findIt">
+                        <h3> Find it! </h3></button>
+                </div>
             </div>
-            <div class="Btn btnLabel boxStyle">
-                <button class="post">
-                    <h3 class="btnLabel"> I have a place to share</h3></button>
+            <div class="Btn modalBtn boxStyle">
+                 <button id="postFormBtn" class="postBtn"><img src="./assets/img/sign-in-wht.svg" class="modalIcon" alt="sig in icon">
+                    <h3 class=""> I've got a place </h3></button>
             </div>
             <!-- google map for geo-location -->
             <div id="map"></div>
         </section>
     </main>
-    <!--     
-    </header>
-    <main>
-        <p>Welcom to MyHood, a local insiders curated field guide to the lesser know local spots that fly under the radar. This is for people who love finding and exploring new places or who find themselves in a strange place with no resource to turn to. Chaperon, it's like having your best friend with really good taste offering recommendations for what to see, where to eat or where to drink.</p>
-    </main> -->
+    <section class="modalDisplay postModal">
+        <div class="modalForm">
+            <div class="modalContent"><span class="xClose">&times;</span>
+                <div class="welcome">
+                    <h1>Tell us what you know!</h1></div>
+                <div class="boxStyle col-6">
+                    <input id="fullName" class="validate" type="text" placeholder="Enter Full Name" reqiured>
+                    <label for="fullName">Your Name</label>
+                </div>
+                <div class="boxStyle col-6">
+                    <input id="Location" class="validate" type="text" placeholder="Where are you (Location)" required>
+                    <label for="Location">Location</label>
+                </div>
+                <div class="boxStyle col-6">
+                    <input id="venueName" class="validate" type="text" placeholder="What are you posting (business name)" required>
+                    <label for="venueName">Business name</label>
+                </div>
+                <div class="boxStyle overflow col-6">
+                    <select id="quest-4" class="qValid" name="venue" required>
+                        <option value="" disabled selected hidden>What kind of business are you posting about</option>
+                        <option value=""> | Breakfast | </option>
+                        <option value=""> | Lunch | </option>
+                        <option value=""> | Dinner | </option>
+                        <option value=""> | Coffee &amp; Tea | </option>
+                        <option value=""> | Nightlife | </option>
+                        <option value=""> | Things to do | </option>
+                    </select>
+                </div>
+                
+                    <textarea id="vDescript" class="boxStyle type=" text " name="vDescript" form="vDescript" placeholder="Tell us what makes it great" required></textarea>
+                
+                <div class="Btn modalBtn boxStyle ">
+                    <button id="btnPost"><img src="./assets/img/sign-in-wht.svg" class="modalIcon" alt="sig in icon"><h3 class="navLabel ">Post it! </h3></button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
 </body>
-<script src="./assets/js/gMaps.js"></script>
-<script src="./assets/js/eventHandle.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG3y33Xmtfr58E4Tkc8D1_TVRSZP4-y8Y&callback=initMap">
+<script src="./assets/js/gMaps.js "></script>
+<script src="./assets/js/eventHandle.js "></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG3y33Xmtfr58E4Tkc8D1_TVRSZP4-y8Y&callback=initMap ">
 </script>
-
-
-
-
-
 <!--
 // //------------- Google Maps Home Page--------------------
 // var map, infoWindow;
@@ -117,6 +145,5 @@
 //         'Error: Your browser doesn\'t support geolocation.');
 //     infoWindow.open(map);
 // } -->
-
 
 </html>
