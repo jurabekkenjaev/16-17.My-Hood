@@ -1,6 +1,6 @@
 @import 'var';
-@import 'signInModal';
-@import 'signUpModal';
+@import 'Modals';
+@import 'search-post';
 @import 'videoBG';
 
 
@@ -73,6 +73,27 @@ input {
     @extend button;
     padding: 0;
     color: $primaryColor !important;
+
+    &::placeholder {
+    font: $formFont;
+    color: $secondaryColor;
+}
+
+/* adds input field name to top of field test */
+
+&:placeholder-shown+label {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+&:focus {
+    outline: none;
+    border-color: #fff;
+}
+}
+
+textarea {
+    width: 100%;
 }
 
 label {
@@ -90,23 +111,6 @@ label {
     transform: translateY(calc(-50% - 1px));
 }
 
-input::placeholder {
-    font: $formFont;
-    color: $secondaryColor;
-}
-
-
-/* adds input field name to top of field test */
-
-input:placeholder-shown+label {
-    opacity: 0;
-    transform: translateY(100%);
-}
-
-input:focus {
-    outline: none;
-    border-color: #fff;
-}
 
 /*. Unversal button style for all pages and forms*/
 
@@ -193,6 +197,7 @@ select:focus {
 
 #map {
     height: 300px;
+    filter: grayscale(100%);
 }
 
 @import 'responsive';

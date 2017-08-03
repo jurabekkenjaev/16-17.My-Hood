@@ -17,17 +17,18 @@
   background: rgba(0, 0, 0, 0.85); }
 
 /* handles submit events from login submit and Sign-up modal forms*/
-.display {
+/*.display {
+    display: none;
+    transform: all .35s ease-in;
+}*/
+/* hides appearance of login and Sign-up modal forms until asked for*/
+.modalDisplay {
   display: none;
   transform: all .35s ease-in; }
 
-/* hides appearance of login and Sign-up modal forms until asked for*/
-.modalDisplay {
-  display: none; }
-
 .modalContent {
   box-sizing: border-box;
-  background-color: #F4F4F4;
+  background-color: white;
   z-index: 10;
   position: absolute;
   top: 50%;
@@ -56,14 +57,13 @@
 .errDisplay {
   background-color: red;
   font: 300 0.9em sans-serif;
-  color: #F4F4F4;
+  color: white;
   border: 1px solid red;
   padding: 10px 20px 10px;
   margin-bottom: 20px;
   position: relative; }
-
-.errDisplay:before {
-  content: 'Attention: '; }
+  .errDisplay:before {
+    content: 'Attention: '; }
 
 .modalIcon {
   position: absolute;
@@ -85,17 +85,24 @@
   color: #999;
   font-size: .8em;
   position: relative; }
+  .dividerOr:before, .dividerOr:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 45%;
+    top: 9px;
+    border-bottom: 1px solid #999; }
+  .dividerOr:after {
+    right: 0; }
 
-.dividerOr:before, .dividerOr:after {
-  content: '';
+.logLabel {
+  position: relative;
+  width: 20px; }
+
+.head {
   position: absolute;
-  display: block;
-  width: 45%;
-  top: 9px;
-  border-bottom: 1px solid #999; }
-
-.dividerOr:after {
-  right: 0; }
+  top: 50%;
+  transform: translateY(-50%); }
 
 /* -- Video on landing pagew -- */
 video#bgvid {
@@ -163,7 +170,20 @@ p.description {
 /*  universal input field styles on all forms */
 input {
   padding: 0;
-  color: #ec7705 !important; }
+  color: #ec7705 !important;
+  /* adds input field name to top of field test */ }
+  input::placeholder {
+    font: 300 0.9em sans-serif;
+    color: #999; }
+  input:placeholder-shown + label {
+    opacity: 0;
+    transform: translateY(100%); }
+  input:focus {
+    outline: none;
+    border-color: #fff; }
+
+textarea {
+  width: 100%; }
 
 label {
   font: 300 0.9em sans-serif;
@@ -178,19 +198,6 @@ label {
   padding: 0 5px;
   transition: all 0.35s;
   transform: translateY(calc(-50% - 1px)); }
-
-input::placeholder {
-  font: 300 0.9em sans-serif;
-  color: #999; }
-
-/* adds input field name to top of field test */
-input:placeholder-shown + label {
-  opacity: 0;
-  transform: translateY(100%); }
-
-input:focus {
-  outline: none;
-  border-color: #fff; }
 
 /*. Unversal button style for all pages and forms*/
 button, input {
@@ -265,7 +272,8 @@ select:focus {
   outline: none; }
 
 #map {
-  height: 300px; }
+  height: 300px;
+  filter: grayscale(100%); }
 
 /*-- Responsive breakpoints --*/
 @media screen and (min-width: 725px) and (max-width: 1000px) {

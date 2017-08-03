@@ -15,17 +15,24 @@ $(document).ready(function() {
     });
 
     // handles Modal forms for either sign in or sign up events
-    $('.navContainer').on('click', '.signInBtn', function(e) {
+    $(document).on('click', '.signInBtn', function(e) {
         e.preventDefault();
         e.stopPropagation();
         $('.signInModal').show();
     });
 
-    $('.navContainer').on('click', '.signUpBtn', function(e) {
+    $(document).on('click', '.signUpBtn', function(e) {
         e.preventDefault();
         e.stopPropagation();
         console.log('clicking signUp')
         $('.signUpModal').show();
+    });
+
+    $(document).on('click', '.postBtn', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('clicking signUp')
+        $('.postModal').show();
     });
 
     // handles Modal appearance for form exit
