@@ -13,12 +13,17 @@ firebase.initializeApp(config);
 // var fullName;
 // var email;
 
+
+
 // Get all elements from HTML file
-const textEmail = $("#textEmail");
-const textPassword = $("#textPassword");
-const btnLogin = $("#btnLogin");
-const btnSignUp = $("#btnSignUp");
-const btnLogout = $("#btnLogout");
+var textEmail = $("#textEmail");
+console.log(textEmail);
+var textPassword = $("#textPassword");
+var signUpPassword = $("#signUpPassword")
+var btnLogin = $("#btnLogin");
+var btnSignUp = $("#btnSignUp");
+var btnLogout = $("#btnLogout");
+var textFullName = $("#signUpName");
 
 // form validation function 
 function addClass(getElem) {
@@ -29,17 +34,19 @@ function removeClass(getElem) {
     getElem.classList.remove('errDisplay');
 }
 
-// Add login event
-btnLogin.click(function() {
-    console.log("clicked the login btn");
-    const email = textEmail.val().trim();
-    const password = textPassword.val().trim();
-    const auth = firebase.auth();
 
-    // Sign In 
-    const promise = auth.signInWithEmailAndPassword(email, password);
-    //promise.catch(e => console.log('line34 message: ', e.message +"login event" + e));
-    promise.catch(function(e) {
+// Add login event
+$('.modalContent').on('click', '#btnLogin', function() {
+    console.log("clicked login btn");
+    var email = $("#textEmail").val().trim()
+    console.log("email: " + email)
+    var password = textPassword.val();
+    var auth = firebase.auth();
+
+    // Sign In
+    var promise = auth.signInWithEmailAndPassword(email, password);
+
+   promise.catch(function(e) {
         if (e.code) {
             var getElem = document.querySelector('.errHandle');
             var err = document.getElementById('error');
@@ -48,7 +55,7 @@ btnLogin.click(function() {
 
         } else {
     
-            var submitLogIn = document.querySelector('submit-LogIn');
+            var submitLogIn = document.querySelector('.submit-LogIn');
             removeClass(getElem);
             submitLogIn.classList.add('btn-logIn');
 
@@ -57,32 +64,33 @@ btnLogin.click(function() {
             textPassword.val("");
         }
     });
+
 });
 
 
-
 // Add signup event
-btnSignUp.click(function() {
-    console.log("clicked Signup btn");
-    const fullName = textfullName.val().trim
-    const email = textEmail.val().trim;
-    const password = textPassword.val().trim;
-    const auth = firebase.auth();
+$('#modalSignUpBtn').on('click', function(e) {
+    var email = $("#signUpEmail").val().trim()
+    console.log("email: " + email);
+    var displayName = textFullName.val()
+    console.log("displayName : " + displayName)
+    var password = signUpPassword.val();
+    var auth = firebase.auth();
 
     // Create User
-    const promise = auth.createUserWithEmailAndPassword(email, password);
+    var promise = auth.createUserWithEmailAndPassword(email, password);
 
-    promise.catch(function(e) {
+promise.catch(function(e) {
         if (e.code) {
             var getElem = document.querySelector('.errHandle');
             var err = document.getElementById('error');
-            addClass(getElem)
+            addClass(getElem);
             err.innerHTML = e.message;
 
         } else {
-            var getElem = document.querySelector('.errHandle');
-            var submitLogIn = document.querySelector('submit-LogIn')
-            getElem.classList.remove('errDisplay');
+    
+            var submitLogIn = document.querySelector('.submit-LogIn');
+            removeClass(getElem);
             submitLogIn.classList.add('btn-logIn');
 
             // clears input after entry
