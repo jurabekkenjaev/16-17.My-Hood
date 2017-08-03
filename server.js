@@ -13,6 +13,10 @@ var app = express();
 
 var PORT = process.env.PORT || 8080;
 
+//Requires models
+var db = require("./models");
+
+
 // * SETS UP THE EXPRESS APP TO HANDLE DATA PARSING**************************
 //---------------------------------------------------------------------------
 app.use(bodyParser.json());
@@ -22,9 +26,15 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static(path.join(__dirname, './public')))
 
-// ******************************** ROUTES
-require("./controllers/controller.js")(app);
-//---------------------------------------------------------------------------
-app.listen(PORT, function() {
-    console.log("App listening on PORT: " + PORT);
+//ROUTES
+require("./controllers/apiPostRoutes.js")(app);
+require("./controllers/apiSearchRoutes.js")(app);
+require("./controllers/htmlRoutes.js")(app);
+
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });
