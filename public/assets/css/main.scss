@@ -1,4 +1,5 @@
 @import 'var';
+@import 'display';
 @import 'Modals';
 @import 'search-post';
 @import 'videoBG';
@@ -40,7 +41,7 @@ body {
 
 .col-3 {
     margin-right: 10px;
-    
+
     &:last-child {
         margin-right: 0;
     }
