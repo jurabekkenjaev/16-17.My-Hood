@@ -1,0 +1,85 @@
+
+
+/*. Dupe from main css to be deleted. */
+@import 'var';
+
+
+body {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    font: $fontBody;
+}
+
+.headWrapper {
+    padding: 6px 50px 10px;
+    background-color: $bgColor;
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo {
+    font: $fontLogo;
+    flex: 3;
+}
+
+
+/* ---------- end duplication ----------*/
+
+
+.rowWrapper {
+	margin-top: 20px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font: $formFont;
+	background-color: $bgColor;
+	padding: 20px;
+}
+
+.vote-column {
+    flex: 1;
+    text-align: center;
+    font-weight: 700;
+
+    
+}
+
+.vote {
+        font: $formFont;
+        font-size: .2em;
+        font-weight: 700;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+
+        &.vote:hover {
+        	opacity: 1;
+        }
+    }
+
+.photo-column {
+	flex: 1;
+	width: 35px;
+}
+
+.downArrow {
+	width: 55px;
+	position: relative
+}
+
+.upArrow {
+	@extend .downArrow
+}
+
+.info-column {
+	flex: 3;
+
+}
+
+
+

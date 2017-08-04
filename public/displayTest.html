@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MyHood display</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/display.css">
+    <!-- Googel fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Montserrat:800|Roboto:300,700" rel="stylesheet">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+</head>
+<!-- header -->
+<header class="headWrapper">
+    <div class="logo">
+        <h1>MyHood</h1>
+    </div>
+    <!-- User logged in status -->
+    <section class="row">
+        <div class="logLabel">
+            <img src="./assets/img/loginHead.svg" class="head" alt="head icon">
+        </div>
+        <div class="navLabel signUpBtn">
+            <button id="btn-Logout">
+                <h4> Log me out </h4></button>
+        </div>
+</header>
+<section class="rowWrapper">
+    <div class="vote-column">
+        <div class="upArrow">
+            <button id="upVote" class="arrow"><img src="./assets/img/upArrow.svg" alt="up arrow icon">
+            </button>
+            <h4 class="vote">Up Vote</h4>
+        </div>
+        <h1><span id="click-Val"></span> Votes</h1>
+        <div class="arrow">
+            <button id="downVote" class="downArrow"><img src="./assets/img/downArrow.svg" alt="down arrow icon"></button><h4 class="vote">Down Vote</h4>
+            
+        </div>
+    </div>
+    <div class="photo-column">
+        <img src="./assets/img/loginHead.svg" alt="head icon" width="35px">
+        <h2 class="fName">Jake DeMonaco</h2>
+    </div>
+    <div class="info-column">
+        <div><h2 class="bName">DeMonaco's Waffle House</h2></div>
+        <div><h3 class="bAddress">123 Mission</h3></div>
+        
+        <div class="bDescript">
+            <p>Ritatiis sandanisciis aut volorem oleserum et molorep remped eicate volorpore andundi gnihici lictisquo mos seque millaut lit volent ut rerum ad quam as aut molorite rest officil iquatae si de posti renda voloreped estiandi conecea volupturi remquae nim quuntius.</p>
+            <br />
+            <p>Soloremolor sit labo. Magnim sam comnimporem. Excesti aut vellit doluptiur, omnisquidus apit et ommossi digenih illandi squam, nat quist fuga. Ita si ut re corisimi, audissi nciist expelendel et excerov iduciuntest fugitat que atur reror audis ma solut quianim quaepudis aut fuga. Et ipsam nonsedi voluptat.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- dynamic stuff below -->
+<div class="displayRow"></div>
+<script id="post-template" type="text/x-handlebars-template" src="handlebars.compile">
+    {{#each information_db}}
+    <!--     <div class="vote">
+        <button id="up-button">Up Vote</button>
+        <h1><span id="click-value"></span> Votes</h1>
+        <button id="down-button">Down Vote</button>
+    </div> -->
+    <div class="photo">
+        <img src="./assets/img/loginHead.svg" class="head" alt="head icon">
+    </div>
+    <!--         <div class="photo-column">
+            <img src="{{photo}}">
+        </div> -->
+    <div class="info-column">
+        <h2 class="BusName"> {{Business_name}} </h2>
+        <h4>Address: {{street_name}}</h4>
+        <p>{{review}}</p>
+    </div>
+    {{/each}}
+</script>
+</head>
+
+<body>
+</body>
+
+</html>

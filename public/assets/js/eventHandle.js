@@ -40,6 +40,8 @@ $(document).ready(function() {
         e.preventDefault
         e.stopPropagation
         $('.signInModal, .signUpModal, .postModal').hide();
+        $('.errHandle').removeClass('errDisplay');
+        $('#error').empty();
 
     });
     // handles login submit on modal to displays login message (upper right of index-page)

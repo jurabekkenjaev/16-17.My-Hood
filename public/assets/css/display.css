@@ -1,0 +1,83 @@
+/*. Dupe from main css to be deleted. */
+/* -- Sass varaible declaration -- */
+/* -- $Typography -- */
+/* -- $color -- */
+/* -- $breakpoints -- */
+body {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  font: 300 1em "Merriweather", serif; }
+
+.headWrapper {
+  padding: 6px 50px 10px;
+  background-color: #F4F4F4;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.logo {
+  font: 800 2.25em "Montserrat", sans-serif;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3; }
+
+/* ---------- end duplication ----------*/
+.rowWrapper {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font: 300 0.9em "Roboto", sans-serif;
+  background-color: #F4F4F4;
+  padding: 20px; }
+
+.vote-column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  font-weight: 700; }
+
+.vote {
+  font: 300 0.9em "Roboto", sans-serif;
+  font-size: .2em;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0; }
+  .vote.vote:hover {
+    opacity: 1; }
+
+.photo-column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 35px; }
+
+.downArrow, .upArrow {
+  width: 55px;
+  position: relative; }
+
+.info-column {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3; }
+
+/*# sourceMappingURL=display.css.map */

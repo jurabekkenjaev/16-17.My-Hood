@@ -2,12 +2,8 @@
 /* -- $Typography -- */
 /* -- $color -- */
 /* -- $breakpoints -- */
-.rowWrapper {
-  margin-top: 50px; }
-
-.photo {
-  width: 35px; }
-
+/*@import 'display';
+*/
 /* -- sign in modal window -- */
 /* modal sign-up window*/
 .modalForm {
@@ -205,6 +201,7 @@ body {
   text-align: center; }
 
 p.description {
+  font: 300 0.9em "Roboto", sans-serif;
   font-size: 1em;
   margin-bottom: 20px; }
 
