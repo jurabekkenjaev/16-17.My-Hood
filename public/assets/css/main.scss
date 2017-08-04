@@ -65,7 +65,7 @@ body {
     text-align: center;
 }
 
-    p.description {
+p.description {
         font-size: 1em;
         margin-bottom: 20px;
     }
@@ -148,9 +148,15 @@ button:hover {
 }
 
 .navLabel button {
+    font: $formFont;
     color: $primaryColor;
     height: 40px;
+
+    &:hover {
+    color: $secondaryColor;
+    }
 }
+
 
 .btnLabel {
     font: $formFont;
@@ -159,8 +165,8 @@ button:hover {
 .Btn {
     box-sizing: border-box;
     border: 1px solid $secondaryColor;
-    margin-bottom: 30px;
     background-color: $secondaryColor;
+    margin-bottom: 30px;
     overflow: hidden;
 }
 
@@ -170,9 +176,7 @@ button:hover {
 .display {
     display: flex;
 }
-.logIcon {
-    background-color: tomato;
-}
+
 /* icons for hover states */
 .icon {
     position: absolute;
