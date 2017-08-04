@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Controversy</title>
-	<script id="post-template" type="text/x-handlebars-template" src="handlebars.compile"></script>
+    <meta charset="UTF-8">
+    <title>MyHood display</title>
+
+
+
+    <script id="post-template" type="text/x-handlebars-template" src="handlebars.compile">
+        {{#each information_db}}
+            <div class="vote">
+        <button id="up-button">Up Vote</button>
+        <h1><span id="click-value"></span> Votes</h1>
+        <button id="down-button">Down Vote</button>
+    </div>
+    <div class="photo">
+        <img src="./assets/img/loginHead.svg" class="head" alt="head icon">
+    </div>
+
+
+        <div class="info-column">
+            <h2 class="BusName"> {{Business_name}} </h2>
+            <h4>Address: {{street_name}}</h4>
+            <p>{{review}}</p>
+        </div>
+        {{/each}}
+    </script>
 </head>
+
 <body>
-	
 </body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CountDown Button with Firebase!</title>
+</head>
+
+<body>
+    <button id="up-button">Up Vote</button>
+    <h1><span id="click-value"></span> Votes</h1>
+    <button id="down-button">Down Vote</button>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Script -->
+    <!-- <script src="logic.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+</body>
+
+
 </html>

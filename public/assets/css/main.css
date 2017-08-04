@@ -2,6 +2,12 @@
 /* -- $Typography -- */
 /* -- $color -- */
 /* -- $breakpoints -- */
+.rowWrapper {
+  margin-top: 50px; }
+
+.photo {
+  width: 35px; }
+
 /* -- sign in modal window -- */
 /* modal sign-up window*/
 .modalForm {
@@ -56,7 +62,7 @@
 
 .errDisplay {
   background-color: red;
-  font: 300 0.9em sans-serif;
+  font: 300 0.9em "Roboto", sans-serif;
   color: white;
   border: 1px solid red;
   padding: 10px 20px 10px;
@@ -133,7 +139,7 @@ body {
   align-items: center; }
 
 .logo {
-  font: 400 2.25em "Vast Shadow", cursive;
+  font: 800 2.25em "Montserrat", sans-serif;
   flex: 3; }
 
 .row {
@@ -181,7 +187,7 @@ input {
   color: #ec7705 !important;
   /* adds input field name to top of field test */ }
   input::placeholder {
-    font: 300 0.9em sans-serif;
+    font: 300 0.9em "Roboto", sans-serif;
     color: #999; }
   input:placeholder-shown + label {
     opacity: 0;
@@ -196,7 +202,7 @@ textarea {
     text-align: left; }
 
 label {
-  font: 300 0.9em sans-serif;
+  font: 300 0.9em "Roboto", sans-serif;
   color: #999;
   background-color: white;
   border: 1px solid #ec7705;
@@ -215,7 +221,7 @@ button, input {
   background-color: transparent;
   border-style: none;
   outline: none;
-  font: 300 0.9em sans-serif;
+  font: 300 0.9em "Roboto", sans-serif;
   line-height: 1.7;
   color: #fff;
   display: block;
@@ -233,7 +239,7 @@ button:hover, input:hover {
   height: 40px; }
 
 .btnLabel {
-  font: 300 0.9em sans-serif; }
+  font: 300 0.9em "Roboto", sans-serif; }
 
 .Btn {
   box-sizing: border-box;
