@@ -10,11 +10,11 @@ $("#postBtn").on("click", function(e) {
 	var category = $("#quest-4");
 
 	var whatToPost = {
-		fullName		: $("#firstName").val().trim(),
+		fullName		: $("#fullName").val().trim(),
 		location		: $("#location").val().trim(),
 		venueName		: $("#venueName").val().trim(),
 		chosenCategory	: category.options[category.selectedIndex].innerHTML,
-		postText		: $("#----")
+		createAt		: $("#----")
 
 	}
 
