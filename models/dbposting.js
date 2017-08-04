@@ -1,6 +1,6 @@
 var Sequelize = require("sequelize");
 module.exports = function(sequelize, DataTypes) {
-  var ReviewPost = sequelize.define("ReviewPost", {
+  var Post = sequelize.define("Post", {
     full_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -46,10 +46,7 @@ module.exports = function(sequelize, DataTypes) {
         len: [1, 200],
         notEmpty: true   
       }
-    },
-    post_time: {
-      type: Sequelize.DATE
     }
   });
-  return ReviewPost;
+  return Post;
 };

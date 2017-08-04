@@ -66,3 +66,21 @@ app.get("/api/postVenues/:id", function(req, res) {
       });
   });
 };
+
+// console.log("in post.js")
+
+// $(".modalBtn").on('click', (function() {
+    
+//     var category = $("#quest-4")[0]
+//     var whatToPost = {
+    
+//     fullName    : $("#fullName").val().trim(),
+//         Location        : $("#Location").val().trim(),
+//         venueName       : $("#venueName").val().trim(),
+//         chosenCategory  : category.options[category.selectedIndex].innerHTML,
+//         postText        : $("#vDescript").val().trim() 
+//     }
+//     console.log(whatToPost);
+//     console.log(category);
+
+// }));
