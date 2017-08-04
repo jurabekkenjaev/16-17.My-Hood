@@ -1,3 +1,6 @@
+require = ("../controllers")
+
+
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyDG3y33Xmtfr58E4Tkc8D1_TVRSZP4-y8Y",
@@ -108,13 +111,16 @@ btnLogout.click(function(e) {
 })
 
 
+
 // Add a realtime listener
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         console.log(firebaseUser);
+        window.location='/search';
         btnLogout.removeClass('hide');
     } else {
         console.log("You are not logged in");
+        window.location='/'
         btnLogout.addClass('hide')
     }
 })
