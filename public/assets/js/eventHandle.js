@@ -57,6 +57,8 @@ $(document).ready(function() {
 }); // on document ready closing
 
 
+
+
 //============================================================================
 //========== just another way to handle modal appearence event. ==============
 
