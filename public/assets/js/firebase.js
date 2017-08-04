@@ -1,5 +1,5 @@
-require = ("../controllers")
-
+// require = ("../controllers")
+console.log("Firebase loaded")
 
 // Initialize Firebase
 var config = {
@@ -20,12 +20,11 @@ firebase.initializeApp(config);
 
 // Get all elements from HTML file
 var textEmail = $("#textEmail");
-console.log(textEmail);
 var textPassword = $("#textPassword");
 var signUpPassword = $("#signUpPassword")
 var btnLogin = $("#btnLogin");
 var btnSignUp = $("#btnSignUp");
-var btnLogout = $("#btnLogout");
+var btnLogout = $("#btn-Logout");
 var textFullName = $("#signUpName");
 
 // form validation function 
@@ -49,7 +48,7 @@ $('.modalContent').on('click', '#btnLogin', function() {
     // Sign In
     var promise = auth.signInWithEmailAndPassword(email, password);
 
-   promise.catch(function(e) {
+    promise.catch(function(e) {
         if (e.code) {
             var getElem = document.querySelector('.errHandle');
             var err = document.getElementById('error');
@@ -57,7 +56,7 @@ $('.modalContent').on('click', '#btnLogin', function() {
             err.innerHTML = e.message;
 
         } else {
-    
+
             var submitLogIn = document.querySelector('.submit-LogIn');
             removeClass(getElem);
             submitLogIn.classList.add('btn-logIn');
@@ -67,6 +66,8 @@ $('.modalContent').on('click', '#btnLogin', function() {
             textPassword.val("");
         }
     });
+
+
 
 });
 
@@ -83,7 +84,7 @@ $('#modalSignUpBtn').on('click', function(e) {
     // Create User
     var promise = auth.createUserWithEmailAndPassword(email, password);
 
-promise.catch(function(e) {
+    promise.catch(function(e) {
         if (e.code) {
             var getElem = document.querySelector('.errHandle');
             var err = document.getElementById('error');
@@ -91,10 +92,11 @@ promise.catch(function(e) {
             err.innerHTML = e.message;
 
         } else {
-    
+
             var submitLogIn = document.querySelector('.submit-LogIn');
             removeClass(getElem);
             submitLogIn.classList.add('btn-logIn');
+            // window.location = '/search';
 
             // clears input after entry
             textEmail.val("");
@@ -108,19 +110,54 @@ btnLogout.click(function(e) {
 
     firebase.auth().signOut();
 
+//         // Add a realtime listener
+// firebase.auth().onAuthStateChanged(firebaseUser => {
+//     if (firebaseUser) {
+//         console.log(firebaseUser);
+//         btnLogout.removeClass('hide');
+//         location.reload(false);
+//         window.location = '/search';
+//     } else {
+//         console.log("You are not logged in");
+//         btnLogout.addClass('hide')
+
+//         window.location='/'
+//     }
+// })
+
 })
 
-
-
-// Add a realtime listener
-firebase.auth().onAuthStateChanged(firebaseUser => {
-    if (firebaseUser) {
-        console.log(firebaseUser);
-        window.location='/search';
-        btnLogout.removeClass('hide');
-    } else {
-        console.log("You are not logged in");
-        window.location='/'
-        btnLogout.addClass('hide')
+firebase.auth().onAuthStateChanged(function(user, error) {
+console.log(window.location.pathname)
+if (error) {
+    console.log(error)
+}
+  if (user) {
+    console.log(user)
+    if (window.location.pathname == "/") {
+        window.location = "/search"
     }
-})
+
+  } else {
+    console.log("Not signed in")
+    if (window.location.pathname != "/") {
+        window.location = "/"
+    }
+  }
+});
+
+//     // Add a realtime listener
+// firebase.auth().onAuthStateChanged(firebaseUser => {
+//     if (firebaseUser) {
+//         console.log(firebaseUser);
+//         btnLogout.removeClass('hide');
+//         // location.reload(false);
+//         // window.location = '/search';
+
+//     } else {
+//         console.log("You are not logged in");
+//         btnLogout.addClass('hide')
+
+//         // window.location='/'
+//     }
+// })

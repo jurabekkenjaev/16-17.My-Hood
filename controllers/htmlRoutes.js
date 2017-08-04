@@ -24,11 +24,11 @@ app.get('/index', function (req, res) {
 //postVenue route loads postVenue.html
 app.get('/postVenue', function (req, res) {
 		//console.log("Info route found!");
-	res.sendFile(path.join(__dirname, "/../public/postVenue.html"));
+	res.sendFile(path.join(__dirname, "../public/postVenue.html"));
 });
 
 //search route loads search.html
 app.get("/search", function(req, res) {
-	res.sendFile(path.join(__dirname, "/../public/search.html"));
+	res.sendFile(path.join(__dirname, "../public/search.html"));
 });
 }
