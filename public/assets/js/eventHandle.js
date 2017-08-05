@@ -36,14 +36,31 @@ $(document).ready(function() {
     });
 
     // handles Modal appearance for form exit
-    $('.modalDisplay').on('click', '.xClose, .btn-SignUp', function(e) {
+    $('.modalDisplay').on('click', '.xClose, .btn-SignUp, .btnClose', function(e) {
+
         e.preventDefault
         e.stopPropagation
+
         $('.signInModal, .signUpModal, .postModal').hide();
         $('.errHandle').removeClass('errDisplay');
         $('#error').empty();
-
+        window.location="/search"
     });
+
+
+    // handles Modal appearance for form exit
+    $(document).on('click', '.btnClose', function(e) {
+
+        e.preventDefault
+        e.stopPropagation
+
+        window.location="/search"
+    });
+
+
+
+
+
     // handles login submit on modal to displays login message (upper right of index-page)
     $('.modalForm').on('click', '.btn-LogIn', function(e) {
         $('.navContainer').hide();
