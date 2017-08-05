@@ -14,140 +14,126 @@
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
 </head>
+
 <body>
+    <!-- header -->
+    <header class="headWrapper">
+        <div class="logo">
+            <h1>MyHood</h1>
+        </div>
+        <!-- User logged in status -->
+        <section class="row">
+            <div class="logLabel">
+                <img src="./assets/img/loginHead.svg" class="head" alt="head icon">
+            </div>
+            <div class="navLabel signUpBtn">
+                <button id="btn-Logout">
+                    <h4> Log me out </h4></button>
+            </div>
+    </header>
 
-<!-- header -->
-<header class="headWrapper">
-    <div class="logo">
-        <h1>MyHood</h1>
-    </div>
-    <!-- User logged in status -->
-    <section class="row">
-        <div class="logLabel">
-            <img src="./assets/img/loginHead.svg" class="head" alt="head icon">
+    <section class="rowWrapper">
+        <div class="vote-column">
+            <div class="voteWrapper">
+                <div class="upArrow" data-val="1">
+                    <button id="upVote" class="arrow"><img src="./assets/img/upArrow.svg" alt="up arrow icon">
+                    </button>
+                    <h4 class="vote">Up Vote</h4>
+                </div>
+                 <div class="voteCount"><h2>Votes:</h2>
+        <h1>0</h1>
         </div>
-        <div class="navLabel signUpBtn">
-            <button id="btn-Logout">
-                <h4> Log me out </h4></button>
+                <div class="downArrow" data-val="-1">
+                    <button id="downVote" class="arrow"><img src="./assets/img/downArrow.svg" alt="down arrow icon"></button>
+                    <h4 class="vote">Down Vote</h4>
+                </div>
+            </div>
         </div>
-</header>
-<section class="rowWrapper">
-<div class="vote-column">
-    <div class="voteWrapper">
-        <div class="upArrow" data-val="1">
-            <button id="upVote" class="arrow"><img src="./assets/img/upArrow.svg" alt="up arrow icon">
-            </button>
-            <h4 class="vote">Up Vote</h4>
+        <div class="photo-column">
+            <img src="./assets/img/loginHead-gray.svg" alt="head icon" width="70px">
+            <h2 class="fName">Fernando</h2>
         </div>
-        <h1 class="voteCount"><span id="click-Val"></span> </h1>
-        <div class="downArrow" data-val="-1">
-            <button id="downVote" class="arrow"><img src="./assets/img/downArrow.svg" alt="down arrow icon"></button>
-            <h4 class="vote">Down Vote</h4>
+        <div class="info-column">
+            <div>
+                <h2 class="bName">DeMonaco's Waffle House</h2></div>
+            <div>
+                <h3 class="bAddress">123 Mission Street</h3></div>
+             <div class="bDescript">
+                <p>Let me first start off by saying I've had great service from this establishment for many years prior to the last 2 months. I've been a loyal customer for nearly over 9 years. </p>
+                <br />
+                <p>However, Today was the last straw. I ordered my food at 7.50. Large waffle and buffalo tenders. The person on the phone said it would be out in 45 mins. it wasn't, At 9.05 I call and inquire about my food. I wasn't even upset, I was merely looking for an ETA. </p>
+            </div>
         </div>
-    </div>
-    </div>
-    <div class="photo-column">
-        <img src="./assets/img/loginHead.svg" alt="head icon" width="35px">
-        <h2 class="fName">Fernando Medina</h2>
-    </div>
-    <div class="info-column">
-        <div><h2 class="bName">DeMonaco's Waffle House</h2></div>
+    </section>
+
+        <section class="rowWrapper">
+        <div class="vote-column">
+            <div class="voteWrapper">
+                <div class="upArrow" data-val="1">
+                    <button id="upVote" class="arrow"><img src="./assets/img/upArrow.svg" alt="up arrow icon">
+                    </button>
+                    <h4 class="vote">Up Vote</h4>
+                </div>
+                 <div class="voteCount"><h2>Votes:</h2>
+        <h1>0</h1>
+        </div>
+                <div class="downArrow" data-val="-1">
+                    <button id="downVote" class="arrow"><img src="./assets/img/downArrow.svg" alt="down arrow icon"></button>
+                    <h4 class="vote">Down Vote</h4>
+                </div>
+            </div>
+        </div>
+        <div class="photo-column">
+            <img src="./assets/img/loginHead-gray.svg" alt="head icon" width="70px">
+            <h2 class="fName">Jake D.</h2>
+        </div>
+        <div class="info-column">
+
 <div>
-    <h3 class="bAddress">123 Mission</h3></div>
-<div class="bDescript">
-    <p>Let me first start off by saying I've had great service from this establishment for many years prior to the last 2 months. I've been a loyal customer for nearly over 9 years. </p>
-    <br />
-    <p>However, Today was the last straw. I ordered my food at 7.50. Large waffle and buffalo tenders. The person on the phone said it would be out in 45 mins. it wasn't, At 9.05 I call and inquire about my food. I wasn't even upset, I was merely looking for an ETA. </p>
-</div>
-</div></section>
-
-<section class="rowWrapper">
-<div class="vote-column">
-    <div class="voteWrapper">
-        <div class="upArrow">
-            <button id="upVote" class="arrow" data-val="1"><img src="./assets/img/upArrow.svg" alt="up arrow icon">
-            </button>
-            <h4 class="vote">Up Vote</h4>
+                <h2 class="bName">Excellent pizza, pizza</h2></div> 
+            <div>
+                <h3 class="bAddress">94-24 tomaten Rd</h3></div>
+            <div class="bDescript">
+                <p>Excellent pizza. I mean really excellent pizza, pizza that for me has that nostalgic taste. I remember eating amazing pizza when I was a kid, and I'm always hard pressed to find that same pizza flavor and texture I remember. I tried this pizza for the first time last night and I have to say, this is that pizza for me. </p>
+                <br />
+                <p>Soloremolor sit labo. Magnim sam comnimporem. Excesti aut vellit doluptiur, omnisquidus apit et ommossi digenih illandi squam, nat quist fuga. Ita si ut re corisimi, audissi nciist expelendel et excerov iduciuntest fugitat que atur reror audis ma solut quianim quaepudis aut fuga. Et ipsam nonsedi voluptat.</p>
+            </div>
         </div>
-        <h1 class="voteCount"><span id="click-Val"></span> </h1>
-        <div class="downArrow">
-            <button id="downVote" class="arrow" data-val="-1"><img src="./assets/img/downArrow.svg" alt="down arrow icon"></button>
-            <h4 class="vote">Down Vote</h4>
-        </div>
-    </div>
-    </div>
-    <div class="photo-column">
-        <img src="./assets/img/loginHead.svg" alt="head icon" width="35px">
-        <h2 class="fName">Jake DeMonaco</h2>
-    </div>
-    <div class="info-column">
-        <div><h2 class="bName"></h2></div>
-        <div><h3 class="bAddress">123 Mission</h3></div>
-        
-        <div class="bDescript">
-            <p>Excellent pizza. I mean really excellent pizza, pizza that for me has that nostalgic taste. I remember eating amazing pizza when I was a kid, and I'm always hard pressed to find that same pizza flavor and texture I remember. I tried this pizza for the first time last night and I have to say, this is that pizza for me. </p>
-            <br />
-            <p>Soloremolor sit labo. Magnim sam comnimporem. Excesti aut vellit doluptiur, omnisquidus apit et ommossi digenih illandi squam, nat quist fuga. Ita si ut re corisimi, audissi nciist expelendel et excerov iduciuntest fugitat que atur reror audis ma solut quianim quaepudis aut fuga. Et ipsam nonsedi voluptat.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-
-<!-- dynamic stuff below -->
-<!-- <div class="displayRow"></div>
-<script id="post-template" type="text/x-handlebars-template" src="handlebars.compile">
-    {{#each information_db}} -->
-    <!--     <div class="vote">
-        <button id="up-button">Up Vote</button>
-        <h1><span id="click-value"></span> Votes</h1>
-        <button id="down-button">Down Vote</button>
-    </div> -->
-  <!--   <div class="photo">
-        <img src="./assets/img/loginHead.svg" class="head" alt="head icon">
-    </div> -->
-    <!--         <div class="photo-column">
-            <img src="{{photo}}">
-        </div> -->
-<!--     <div class="info-column">
-        <h2 class="BusName"> {{Business_name}} </h2>
-        <h4>Address: {{street_name}}</h4>
-        <p>{{review}}</p>
-    </div>
-    {{/each}}
-</script> -->
-</head>
-$(this).find('.icon').
 
 </body>
-
 <script type="text/javascript">
 var count = 0;
-    // $('.voteWrapper').on('click', '.upArrow, .downArrow', function(e) {
-    //     e.stopPropagation();
-    //     e.preventDefault();
-    //     console.log('clicking');
-    //     console.log(this)
-    //     $('#click-Val').html("Votes: " + (count+=1));
-    // });
+// $('.voteWrapper').on('click', '.upArrow, .downArrow', function(e) {
+//     e.stopPropagation();
+//     e.preventDefault();
+//     console.log('clicking');
+//     console.log(this)
+//     $('#click-Val').html("Votes: " + (count+=1));
+// });
 
-        $('.voteWrapper').on('click', '.upArrow,.downArrow', function(e) {
-        e.stopPropagation();
-        e.preventDefault();
-        console.log('clicking');
-        console.log(this)
-        console.log(this.dataset.val)
-        var clickVal = parseInt(this.dataset.val);
-        $('.voteCount').find('#click-Val').html("Votes: " + (count = clickVal + count));
-    });
+$('.voteWrapper').on('click', '.upArrow,.downArrow', function(e) {
+    // stop native behavior
+    e.stopPropagation();
+    // stop native behavior
+    e.preventDefault();
+    // checking for event trigger
+    console.log('clicking');
+    // check the value of this arrow key
+    console.log(this.dataset.val)
+    console.log(this)
+    // create a local variable to hold the current value of the section
+    var count = parseInt($(this).parent()[0].children[1].children[1].innerHTML)
+    // console.log the count of current value
+    console.log(count);
+    // add the sum of arrow and total current count
+    count += parseInt(this.dataset.val);
+    // redisplay count in html
+    $(this).parent()[0].children[1].children[1].innerHTML = count;
 
-        $('.voteWrapper').on('click', '.downArrow', function(e) {
-        e.stopPropagation();
-        e.preventDefault();
-        console.log('clicking');
-        console.log(this)
-        $('.voteCount').find('#click-Val').html("Votes: " + (count-=1));
-    });
-
+    // $('.voteCount').find('#click-Val').html("Votes: " + (count = clickVal + count));
+});
 </script>
 
 </html>

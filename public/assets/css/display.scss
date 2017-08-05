@@ -40,7 +40,7 @@ body {
 }
 
 .vote-column {
-    flex: 1;
+    flex: -1;
     text-align: center;
     font-weight: 700;
 
@@ -71,7 +71,7 @@ body {
     }
 
 .voteCount {
-    padding: 10px;
+    padding: 5px 0;
 }
 
 .arrow {
@@ -86,18 +86,18 @@ body {
 }
 
 .upArrow {
-    @extend .downArrow
+    @extend .downArrow;
 }
 
 .photo-column {
 	flex: 1;
-	width: 35px;
+	text-align: center;
 }
 
 
 
 .info-column {
-	flex: 3;
+	flex: 2;
 
 }
 
@@ -106,6 +106,11 @@ body {
     font-size: 1.1em;
     margin-bottom: 15px;
 
+}
+
+.fName {
+    @extend .bName;
+    margin-top: 10px;
 }
 
 .bAddress {
