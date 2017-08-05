@@ -61,6 +61,25 @@
             <!-- google map for geo-location -->
             <div id="map"></div>
         </section>
+    
+
+        <div id="results">
+            
+            
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
     <section class="modalDisplay postModal">
         <div class="modalForm">
@@ -73,19 +92,19 @@
                 </div>
                 <div class="boxStyle col-6">
                     <input id="Location" class="validate" type="text" placeholder="Where are you (Location)" required>
-                    <label for="Location">Location</label>
+                    <label for="Location">City/Town</label>
                 </div>
                 <div class="boxStyle col-6">
                     <input id="venueName" class="validate" type="text" placeholder="What are you posting (business name)" required>
-                    <label for="venueName">Business name</label>
+                    <label for="venueName">Business Name</label>
                 </div>
                 <div class="boxStyle col-6">
                     <input id="business-address" class="validate" type="text" placeholder="Enter business address" required>
-                    <label for="venueName">Business name</label>
+                    <label for="venueName">Business Address</label>
                 </div>
                 <div class="boxStyle overflow col-6">
                     <select id="quest-4" class="qValid" name="venue" required>
-                        <option value="" disabled selected hidden>What kind of business are you posting about</option>
+                        <option value="" disabled selected hidden>What kind of business are you posting about?</option>
                         <option value=""> | Breakfast | </option>
                         <option value=""> | Lunch | </option>
                         <option value=""> | Dinner | </option>
@@ -106,9 +125,60 @@
     </section>
 
 </body>
+
+<script type="text/javascript">
+    
+    $(document).on("click", "#btnPost", function() {
+        event.preventDefault();
+        
+        var name = $("#fullName");
+        var town = $("#Location");
+        var category = $("#quest-4");
+        var businessName = $("#venueName");
+        var businessAddress = $("#business-address");
+        var review = $("#vDescript");
+
+        var newPost = {
+            full_name: name.val().trim(),
+            town: town.val().trim(),
+            category: category.val(),
+            business_name: businessName.val().trim(),
+            street_address: businessAddress.val().trim(),
+            review: review.val().trim()
+        };
+
+        console.log(newPost);
+
+        function submitPost(Post) {
+            $.post("http://localhost:8080/api/postVenues", Post, function() {
+             console.log("posted!")
+            });
+        
+        
+        };
+
+        submitPost(newPost);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    });
+</script>
 <script src="./assets/js/firebase.js"></script>
 <script src="./assets/js/gMaps.js "></script>
 <script src="./assets/js/eventHandle.js "></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG3y33Xmtfr58E4Tkc8D1_TVRSZP4-y8Y&callback=initMap ">
 </script>
+
+
+
 </html>
