@@ -31,4 +31,11 @@ app.get('/postVenue', function (req, res) {
 app.get("/search", function(req, res) {
 	res.sendFile(path.join(__dirname, "../public/search.html"));
 });
+
+//index route loads displayTest.html
+app.get('/display', function (req, res) {
+	//console.log("Route found!");
+	res.sendFile(path.join(__dirname, "../public/displayTest.html"));
+});
+
 }

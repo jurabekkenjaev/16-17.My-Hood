@@ -50,36 +50,19 @@
                     </select>
                 </div>
                 <div class="Btn boxStyle col-3 flexSize1">
-                    <button class="findIt">
+                    <button id="btnFindIt" class="findIt">
                         <h3> Find it! </h3></button>
                 </div>
             </div>
             <div class="Btn modalBtn postBtn boxStyle">
-                 <button id="postFormBtn" class=""><img src="./assets/img/sign-in-wht.svg" class="modalIcon" alt="sig in icon">
+                <button id="postFormBtn" class=""><img src="./assets/img/sign-in-wht.svg" class="modalIcon" alt="sig in icon">
                     <h3 class=""> I've got a place </h3></button>
             </div>
             <!-- google map for geo-location -->
             <div id="map"></div>
         </section>
-    
-
         <div id="results">
-            
-            
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
     </main>
     <section class="modalDisplay postModal">
         <div class="modalForm">
@@ -113,11 +96,10 @@
                         <option value=""> | Things to do | </option>
                     </select>
                 </div>
-                
-                    <textarea id="vDescript" class="boxStyle type=" text " name="vDescript" form="vDescript" placeholder="Tell us what makes it great" required></textarea>
+                <textarea id="vDescript" class="boxStyle type=" text " name="vDescript " form="vDescript " placeholder="Tell us what makes it great " required></textarea>
                 
                 <div class="Btn modalBtn boxStyle ">
-                    <button id="btnPost"><img src="./assets/img/sign-in-wht.svg" class="modalIcon" alt="sig in icon"><h3 class="navLabel ">Post it! </h3></button>
+                    <button id="btnPost" class="btnClose"><img src="./assets/img/sign-in-wht.svg " class="modalIcon " alt="sig in icon "><h3 class="navLabel ">Post it! </h3></button>
                 </div>
             </div>
             </div>
@@ -126,17 +108,19 @@
 
 </body>
 
-<script type="text/javascript">
+<script type="text/javascript ">
     
-    $(document).on("click", "#btnPost", function() {
+    $(document).on("click ", "#btnPost ", function() {
         event.preventDefault();
+
+
         
-        var name = $("#fullName");
-        var town = $("#Location");
-        var category = $("#quest-4");
-        var businessName = $("#venueName");
-        var businessAddress = $("#business-address");
-        var review = $("#vDescript");
+        var name = $("#fullName ");
+        var town = $("#Location ");
+        var category = $("#quest-4 ");
+        var businessName = $("#venueName ");
+        var businessAddress = $("#business-address ");
+        var review = $("#vDescript ");
 
         var newPost = {
             full_name: name.val().trim(),
@@ -147,33 +131,40 @@
             review: review.val().trim()
         };
 
+
+
         console.log(newPost);
 
         function submitPost(Post) {
-            $.post("http://localhost:8080/api/postVenues", Post, function() {
-             console.log("posted!")
+            $.post("http://localhost:8080/api/postVenues ", Post, function() {
+             console.log("posted! ")
             });
         
         
         };
 
         submitPost(newPost);
-
-
-
-
-
-
-
-
-
-
-
-
-
+        window.location="/search"
     });
+
+
+
+        $(document).on("click ", "#btnFindIt", function () {
+
+            window.location="/display "
+            
+        })
+
+
+        // $(document).on("click ", "#postFormBtn", function () {
+        //     // alert("robby");
+        //     window.location="/search"
+            
+        // })
+
+
 </script>
-<script src="./assets/js/firebase.js"></script>
+<script src="./assets/js/firebase.js "></script>
 <script src="./assets/js/gMaps.js "></script>
 <script src="./assets/js/eventHandle.js "></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG3y33Xmtfr58E4Tkc8D1_TVRSZP4-y8Y&callback=initMap ">
