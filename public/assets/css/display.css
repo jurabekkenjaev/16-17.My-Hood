@@ -52,6 +52,20 @@ body {
   text-align: center;
   font-weight: 700; }
 
+.voteWrapper {
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center; }
+
 .vote {
   font: 300 0.9em "Roboto", sans-serif;
   font-size: .2em;
@@ -62,8 +76,18 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 0; }
-  .vote.vote:hover {
-    opacity: 1; }
+  .vote:hover {
+    opacity: 1;
+    cursor: pointer; }
+
+.voteCount {
+  padding: 10px; }
+
+.downArrow, .upArrow {
+  width: 50px;
+  height: 45px;
+  position: relative;
+  cursor: pointer; }
 
 .photo-column {
   -webkit-box-flex: 1;
@@ -71,13 +95,17 @@ body {
           flex: 1;
   width: 35px; }
 
-.downArrow, .upArrow {
-  width: 55px;
-  position: relative; }
-
 .info-column {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3; }
+
+.bName {
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: 15px; }
+
+.bAddress {
+  margin-bottom: 15px; }
 
 /*# sourceMappingURL=display.css.map */
