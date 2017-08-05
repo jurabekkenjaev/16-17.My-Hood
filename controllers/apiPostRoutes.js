@@ -2,25 +2,26 @@
 
 // Dependencies
 var db = require("../models");
+console.log(db);
 //var path = require("path");
 
 //api routes --------------
 module.exports = function(app) {
 
-//GET route for getting all the posts
-app.get('/api/postVenues', function (req, res) {
-	console.log("Route found!");
-	var query = {};
-	if (req.query.user_id) {
-		query.UserId = req.query.user_id;
-	}
+                //GET route for getting all the posts
+                app.get('/api/postVenues', function (req, res) {
+                	console.log("Route found!");
+                	var query = {};
+                	if (req.query.user_id) {
+                		query.UserId = req.query.user_id;
+                	}
 
-	db.Information.findAll({
-		where: query
-	}).then(function(informationInDb) {
-		res.json(informationInDb);
-	});
-});
+                	db.Post.findAll({
+                		where: query
+                	}).then(function(informationInDb) {
+                		res.json(informationInDb);
+                	});
+                });
 
 //GET route for retriving a single post
 app.get("/api/postVenues/:id", function(req, res) {
@@ -35,12 +36,12 @@ app.get("/api/postVenues/:id", function(req, res) {
 
 
 
-// POST route for saving a new post
-  app.post("/api/postVenues", function(req, res) {
-    db.Information.create(req.body).then(function(informationInDb) {
-      res.json(informationInDb);
-    });
-  });
+                // POST route for saving a new post
+                  app.post("/api/postVenues", function(req, res) {
+                    db.Post.create(req.body).then(function(informationInDb) {
+                      res.json(informationInDb);
+                    });
+                  });
 
   // DELETE route for deleting posts
   app.delete("/api/postVenues/:id", function(req, res) {
