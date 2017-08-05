@@ -40,11 +40,18 @@ body {
 }
 
 .vote-column {
-    flex: 1;
+    flex: -1;
     text-align: center;
     font-weight: 700;
 
-    
+}
+
+.voteWrapper {
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
 }
 
 .vote {
@@ -57,29 +64,62 @@ body {
         transform: translate(-50%, -50%);
         opacity: 0;
 
-        &.vote:hover {
+        &:hover {
         	opacity: 1;
+            cursor: pointer;
         }
     }
 
-.photo-column {
-	flex: 1;
-	width: 35px;
+.voteCount {
+    padding: 5px 0;
+}
+
+.arrow {
+    
 }
 
 .downArrow {
-	width: 55px;
-	position: relative
+    width: 50px;
+    height: 45px;
+    position: relative;
+    cursor: pointer;
 }
 
 .upArrow {
-	@extend .downArrow
+    @extend .downArrow;
 }
+
+.photo-column {
+	flex: 1;
+	text-align: center;
+}
+
+
 
 .info-column {
-	flex: 3;
+	flex: 2;
 
 }
+
+.bName {
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+
+}
+
+.fName {
+    @extend .bName;
+    margin-top: 10px;
+}
+
+.bAddress {
+    margin-bottom: 15px;
+}
+
+
+
+
 
 
 
