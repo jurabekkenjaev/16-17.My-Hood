@@ -27,8 +27,6 @@ Robert Spica
 
 ## Run MyHood
 
-Entery Heroku url here
-
 <img width="815" alt="MyHood home page" src="xxx">
 
 
